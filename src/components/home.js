@@ -23,6 +23,7 @@ const listSugg = sugg.map((element) =>
 return (
 <div className="container-fluid m-0 p-0">
 
+{ false ?
     <div className="m-0 p-0">    
         <div className="jumbotron jumbotron-fluid">
             <div className="container">
@@ -34,15 +35,8 @@ return (
             </div>
         </div>
     </div>
-
-    <div className="col-md-12 banner mt-0">
-            <div className="jumbotron jumbotron-fluid">
-                <div className="container">
-                <h1 className="display-5 text-center text-white font-weight-bold">Publiez votre offre d’emploi et trouvez les personnes dont vous avez besoin.</h1>
-                </div>
-            </div>
-    </div>
-
+ : null }
+ 
     <div className="row justify-content-center">
 
         <div className="col-md-12">    
@@ -132,6 +126,17 @@ return (
                 </div>
             </div>
         </div>
+
+
+
+    <div className="col-md-12 banner mt-0">
+            <div className="jumbotron jumbotron-fluid">
+                <div className="container">
+                <h1 className="display-5 text-center text-white font-weight-bold">Publiez votre offre d’emploi et trouvez les personnes dont vous avez besoin.</h1>
+                </div>
+            </div>
+    </div>
+
 
         <div className="col-md-12">    
             <div className="jumbotron jumbotron-fluid">

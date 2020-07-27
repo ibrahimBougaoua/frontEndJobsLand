@@ -48,6 +48,7 @@ function App() {
   </div>
 </nav>
 
+{ false ?
 <div className="mt-5 mb-5">
       <form className="form-inline md-form form-sm mt-0 justify-content-center" method="POST" >
           <input className="form-control form-control-sm" name="search" type="text" placeholder="Search Job title,Company..." aria-label="Search" style={{width:"48vw"}}/>          
@@ -58,6 +59,7 @@ function App() {
           <button className="btn btn-sm btn-outline-info my-sm-0 ml-2" data-toggle="modal" data-target="#exampleModal" type="submit">Search</button>
       </form>
 </div>
+: null }
 
       <Switch>
         <Route path="/" exact component={Home} />
