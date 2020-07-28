@@ -2,7 +2,24 @@ import React, { Component } from "react";
 import axios from 'axios';
 import MultiSelect from "@khanacademy/react-multi-select";
 
-const options = [
+const optionsM = [
+{label: "adventure", value: "adventure"},
+{label: "animation", value: "animation"},
+{label: "children", value: "children"},
+{label: "comedy", value: "comedy"},
+{label: "fantasy", value: "fantasy"},
+{label: "romance", value: "romance"},
+{label: "action", value: "action"},
+{label: "crime", value: "crime"},
+{label: "thriller", value: "thriller"},
+{label: "horror", value: "horror"},
+{label: "mystery", value: "mystery"},
+{label: "sci-Fi", value: "sci-Fi"},
+{label: "documentary", value: "documentary"},
+{label: "imax", value: "imax"},
+];
+
+const optionsS = [
 {label: "adventure", value: "adventure"},
 {label: "animation", value: "animation"},
 {label: "children", value: "children"},
@@ -23,7 +40,7 @@ export default class Signup extends Component {
     
     constructor(props) {
         super(props);
-        this.state = {fisrtname: '',lastname: '',email: '',password: '',sexe: 'male',age: 15,country: 'NC',telephone: '',errorMessage: '',selected: []};
+        this.state = {fisrtname: '',lastname: '',email: '',password: '',sexe: 'male',age: 15,country: 'NC',telephone: '',errorMessage: '',selectedM: [],selectedS: []};
         
         this.handleChangeFisrtname = this.handleChangeFisrtname.bind(this);
         this.handleChangeLastname = this.handleChangeLastname.bind(this);
@@ -74,7 +91,8 @@ export default class Signup extends Component {
 
     render() {
 
-    const {selected} = this.state;
+    const {selectedM} = this.state;
+    const {selectedS} = this.state;
 
 // handle button click of signin form
 const handleSignin = () => {
@@ -144,8 +162,13 @@ return (
                         </div>
 
                         <div className="form-group  col-md-6">
-                            <label for="name">Tags</label>
-                            <MultiSelect options={options} selected={selected} onSelectedChanged={selected => this.setState({selected})} />
+                            <label for="name">Majors</label>
+                            <MultiSelect options={optionsM} selected={selectedM} onSelectedChanged={selectedM => this.setState({selectedM})} />
+                        </div>
+
+                        <div className="form-group  col-md-6">
+                            <label for="name">Skills</label>
+                            <MultiSelect options={optionsS} selected={selectedS} onSelectedChanged={selectedS => this.setState({selectedS})} />
                         </div>
 
                         <div className="form-group  col-md-6">
