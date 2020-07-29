@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 
 // handle button click of login form
-async function viewsMovies() {
+async function viewsJobs() {
     try {
       const response = await axios.get('http://127.0.0.1:5000/movie/history/views/email/' + localStorage.getItem('email'));
       console.log(response);
@@ -16,19 +16,19 @@ async function viewsMovies() {
 
 export default class History extends Component {
 
-state = { value: 2,moviesViews: []};
+state = { value: 2,jobsViews: []};
 
 componentDidMount =()=>{
-	viewsMovies().then(response => {
+	viewsJobs().then(response => {
 	  this.setState({
-		moviesViews: [['job one','description one','https://images.pexels.com/photos/3815585/pexels-photo-3815585.jpeg?cs=srgb&dl=person-writing-on-white-paper-3815585.jpg&fm=jpg'],['job tow','description tow','https://images.pexels.com/photos/3815585/pexels-photo-3815585.jpeg?cs=srgb&dl=person-writing-on-white-paper-3815585.jpg&fm=jpg'],['job three','description three','https://images.pexels.com/photos/3815585/pexels-photo-3815585.jpeg?cs=srgb&dl=person-writing-on-white-paper-3815585.jpg&fm=jpg'],['job four','description four','https://images.pexels.com/photos/3815585/pexels-photo-3815585.jpeg?cs=srgb&dl=person-writing-on-white-paper-3815585.jpg&fm=jpg'],['job five','description five','https://images.pexels.com/photos/3815585/pexels-photo-3815585.jpeg?cs=srgb&dl=person-writing-on-white-paper-3815585.jpg&fm=jpg']]
+      jobsViews: [['job one','description one','https://images.pexels.com/photos/3815585/pexels-photo-3815585.jpeg?cs=srgb&dl=person-writing-on-white-paper-3815585.jpg&fm=jpg'],['job tow','description tow','https://images.pexels.com/photos/3815585/pexels-photo-3815585.jpeg?cs=srgb&dl=person-writing-on-white-paper-3815585.jpg&fm=jpg'],['job three','description three','https://images.pexels.com/photos/3815585/pexels-photo-3815585.jpeg?cs=srgb&dl=person-writing-on-white-paper-3815585.jpg&fm=jpg'],['job four','description four','https://images.pexels.com/photos/3815585/pexels-photo-3815585.jpeg?cs=srgb&dl=person-writing-on-white-paper-3815585.jpg&fm=jpg'],['job five','description five','https://images.pexels.com/photos/3815585/pexels-photo-3815585.jpeg?cs=srgb&dl=person-writing-on-white-paper-3815585.jpg&fm=jpg']]
 	  });
 	});
 }
 
 render() {
 
-const historyViews = this.state.moviesViews.map((element) => 
+const historyViews = this.state.jobsViews.map((element) => 
 <div className="col-md-12">
 <div className="card mb-5 border-0 rounded-0 shadow-sm bg-light">
 <div className="row no-gutters">
