@@ -3,20 +3,27 @@ import axios from 'axios';
 import MultiSelect from "@khanacademy/react-multi-select";
 
 const optionsM = [
-{label: "adventure", value: "adventure"},
-{label: "animation", value: "animation"},
-{label: "children", value: "children"},
-{label: "comedy", value: "comedy"},
-{label: "fantasy", value: "fantasy"},
-{label: "romance", value: "romance"},
-{label: "action", value: "action"},
-{label: "crime", value: "crime"},
-{label: "thriller", value: "thriller"},
-{label: "horror", value: "horror"},
-{label: "mystery", value: "mystery"},
-{label: "sci-Fi", value: "sci-Fi"},
-{label: "documentary", value: "documentary"},
-{label: "imax", value: "imax"},
+{label: "Java Developer", value: "Java Developer"},            
+{label: "Software Developer", value: "Software Developer"},         
+{label: "Software Engineer", value: "Software Engineer"},          
+{label: "Web Developer", value: "Web Developer"},              
+{label: "PHP Developer", value: "PHP Developer"},              
+{label: "Graphic Designer", value:  "Graphic Designer"},           
+{label: "Software QA Engineer", value: "Software QA Engineer"},       
+{label: ".NET Developer", value: ".NET Developer"},             
+{label: "Android Developer", value: "Android Developer"},          
+{label: "Database Admin/Dev", value: "Database Admin/Dev"},         
+{label: "Programmer", value: "Programmer"},                 
+{label: "IT Specialist", value: "IT Specialist"},              
+{label: "iOS Developer", value: "iOS Developer"},              
+{label: "Senior Web Developer", value: "Senior Web Developer"},       
+{label: "Java Software Developer", value: "Java Software Developer"},    
+{label: "Network Administrator", value: "Network Administrator"},      
+{label: "Software Engineer", value: "Software Engineer"},          
+{label: "C++ Software Developer", value: "C++ Software Developer"},     
+{label: "Credit Specialist", value: "Credit Specialist"},          
+{label: "IT Manager", value: "IT Manager"},                 
+{label: "ASP.NET Developer", value: "ASP.NET Developer"},
 ];
 
 const optionsS = [
@@ -153,13 +160,6 @@ return (
                             <label for="password">Password</label>
                             <input id="password" type="password" value={this.state.password} onChange={this.handleChangePassword} className="form-control" name="password" />
                         </div>
-                        <div className="form-group  col-md-6">
-                            <label for="name">Sex</label>
-                            <select name="sexe" class="form-control" value={this.state.sexe} onChange={this.handleChangeSexe}>
-                                <option value="male">male</option>
-                                <option value="female">female</option>
-                            </select>
-                        </div>
 
                         <div className="form-group  col-md-6">
                             <label for="name">Majors</label>
@@ -172,11 +172,20 @@ return (
                         </div>
 
                         <div className="form-group  col-md-6">
+                            <label for="name">Sex</label>
+                            <select name="sexe" class="form-control" value={this.state.sexe} onChange={this.handleChangeSexe}>
+                                <option value="male">male</option>
+                                <option value="female">female</option>
+                            </select>
+                        </div>
+
+                        <div className="form-group  col-md-6">
                             <label for="name">Age</label>
                             <select name="age" class="form-control" value={this.state.age} onChange={this.handleChangeAge}>
                                 {listAge}
                             </select>
                         </div>
+
                         <div className="form-group  col-md-6">
                             <label for="name">Country</label>
                             <select name="country" class="form-control" value={this.state.country} onChange={this.handleChangeCountry}>
