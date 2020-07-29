@@ -183,7 +183,7 @@ const optionsS = [
 {label: 'XML', value: "imax"},
 {label: 'XSLT', value: "imax"},
 {label: 'Xero', value: "imax"},
-{label: 'iOS' value: "imax"},
+{label: 'iOS', value: "imax"},
 ];
 
 export default class Signup extends Component {
