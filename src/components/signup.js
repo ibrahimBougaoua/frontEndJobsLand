@@ -246,7 +246,7 @@ export default class Signup extends Component {
 
 // handle button click of signin form
 const handleSignin = () => {
-    axios.get('http://127.0.0.1:5002/job/singup/', {params : {fisrtname : this.state.fisrtname,lastname : this.state.lastname,email : this.state.email,password : this.state.password,sexe : this.state.sexe,age : this.state.age,country : this.state.country,telephone : this.state.telephone,tags : this.state.selected.toString()}})
+    axios.get('http://127.0.0.1:5002/job/singup/', {params : {fisrtname : this.state.fisrtname,lastname : this.state.lastname,email : this.state.email,password : this.state.password,sexe : this.state.sexe,age : this.state.age,country : this.state.country,telephone : this.state.telephone,majors : this.state.selectedM.toString(),skills : this.state.selectedS.toString()}})
     .then(response =>  {
       // setter
       //this.setState({errorMessage: response.data});
