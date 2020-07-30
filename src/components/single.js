@@ -6,7 +6,7 @@ import axios from 'axios';
 // handle button click of login form
 async function singleJob(id) {
     try {
-      const response = await axios.get('http://127.0.0.1:5000/job/single/id/' + id + '/email/' + localStorage.getItem('email'));
+      const response = await axios.get('http://127.0.0.1:5002/job/single/id/' + id + '/email/' + localStorage.getItem('email'));
       console.log(response);
       return response;
     } catch (error) {
@@ -17,7 +17,7 @@ async function singleJob(id) {
 // handle button click of login form
 async function relatedJob(id) {
     try {
-      const response = await axios.get('http://127.0.0.1:5000/job/related/id/' + id);
+      const response = await axios.get('http://127.0.0.1:5002/job/related/id/' + id);
       console.log(response);
       return response;
     } catch (error) {
@@ -27,7 +27,7 @@ async function relatedJob(id) {
   
 async function getJobRating(id) {
     try {
-      const response = await axios.get('http://localhost:5000/job/single/rating/id/' + id + '/email/' + localStorage.getItem('email'))
+      const response = await axios.get('http://localhost:5002/job/single/rating/id/' + id + '/email/' + localStorage.getItem('email'))
       console.log(response);
       return response;
     } catch (error) {
@@ -37,7 +37,7 @@ async function getJobRating(id) {
 
 async function rating(rating_value,id) {
   try {
-    const response = await axios.get('http://localhost:5000/job/single/id/' + id + '/rating/' + rating_value + '/email/' + localStorage.getItem('email'))
+    const response = await axios.get('http://localhost:5002/job/single/id/' + id + '/rating/' + rating_value + '/email/' + localStorage.getItem('email'))
     console.log(response);
     return response;
   } catch (error) {
@@ -48,7 +48,7 @@ async function rating(rating_value,id) {
 // handle button click of login form
 async function ifShowLater(id) {
   try {
-    const response = await axios.get('http://127.0.0.1:5000/job/check/showlater/user/' + localStorage.getItem('email') +'/id/' + id);
+    const response = await axios.get('http://127.0.0.1:5002/job/check/showlater/user/' + localStorage.getItem('email') +'/id/' + id);
     console.log(response);
     return response;
   } catch (error) {
@@ -68,7 +68,7 @@ render() {
 
 // handle button click of login form
 const new_show_later = () => {
-  axios.get('http://127.0.0.1:5000/job/showlater/new/email/' + localStorage.getItem('email') + '/id/' + this.props.match.params.id)
+  axios.get('http://127.0.0.1:5002/job/showlater/new/email/' + localStorage.getItem('email') + '/id/' + this.props.match.params.id)
   .then(function (response) {
     // setter
     //const token = localStorage.setItem('token', response.data.access_token)
@@ -84,7 +84,7 @@ const new_show_later = () => {
 
 // handle button click of login form
 const delete_show_late = () => {
-  axios.get('http://127.0.0.1:5000/job/showlater/delete', {params : {_email:  localStorage.getItem('email'),  _id: this.props.match.params.id}})
+  axios.get('http://127.0.0.1:5002/job/showlater/delete', {params : {_email:  localStorage.getItem('email'),  _id: this.props.match.params.id}})
   .then(function (response) {
     // setter
     //const token = localStorage.setItem('token', response.data.access_token)
@@ -97,7 +97,7 @@ const delete_show_late = () => {
   });
 }
 
-const singleMovie = this.state.movie.map((element) => 
+const singleMovie = this.state.job.map((element) => 
 
 <div className="card mb-5 border-0 rounded-0 shadow-sm bg-light">
 	<div className="row no-gutters">
