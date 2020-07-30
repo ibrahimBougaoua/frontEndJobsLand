@@ -27,7 +27,7 @@ const optionsM = [
 ];
 
 const optionsS = [
-{label: '.Net', value: "imax"},
+{label: '.Net', value: ".Net"},
 {label: '3G', value: "imax"},
 {label: 'ACH', value: "imax"},
 {label: 'AI', value: "imax"},
