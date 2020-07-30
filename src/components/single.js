@@ -97,7 +97,7 @@ const delete_show_late = () => {
   });
 }
 
-const singleMovie = this.state.job.map((element) => 
+const singleJob = this.state.job.map((element) => 
 
 <div className="card mb-5 border-0 rounded-0 shadow-sm bg-light">
 	<div className="row no-gutters">
@@ -165,7 +165,7 @@ const singleMovie = this.state.job.map((element) =>
 return (
 <div className="container">    
 
-{singleMovie}
+{singleJob}
 
 
 
