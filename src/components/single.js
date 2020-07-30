@@ -4,7 +4,7 @@ import BeautyStars from 'beauty-stars';
 import axios from 'axios';
 
 // handle button click of login form
-async function singleMovie(id) {
+async function singleJob(id) {
     try {
       const response = await axios.get('http://127.0.0.1:5000/movie/single/id/' + id + '/email/' + localStorage.getItem('email'));
       console.log(response);
@@ -15,7 +15,7 @@ async function singleMovie(id) {
   }
 
 // handle button click of login form
-async function relatedMovie(id) {
+async function relatedJob(id) {
     try {
       const response = await axios.get('http://127.0.0.1:5000/movie/related/id/' + id);
       console.log(response);
@@ -25,7 +25,7 @@ async function relatedMovie(id) {
     }
   }
   
-async function getMovieRating(id) {
+async function getJobRating(id) {
     try {
       const response = await axios.get('http://localhost:5000/movie/single/rating/id/' + id + '/email/' + localStorage.getItem('email'))
       console.log(response);
