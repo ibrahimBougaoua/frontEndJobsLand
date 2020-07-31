@@ -2,16 +2,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from 'axios';
 
-async function all_signalisations() {
-  try {
-    const response = await axios.get('http://127.0.0.1:5002/job/auth/signalisation')
-    console.log(response);
-    return response;
-  } catch (error) {
-    console.error(error);
-  }
-}
-
 export default class Home extends Component {
 
   constructor(props) {
@@ -47,19 +37,19 @@ event.preventDefault();
 render() {
 // handle button click of signin form
 const handleSearch = () => {
-  if(this.state.cate == 'desc') {
-      axios.get('http://127.0.0.1:8000/api/auth/search/?desc=' + this.state.value).then(function (response) {
+  if(this.state.cate == 'skills') {
+      axios.get('http://127.0.0.1:5002/job/search/?=' + this.state.value).then(function (response) {
       console.log(response)
       }).catch(function (error) {
       console.log(error);
       });
-  } else if(this.state.cate == 'nature') {
+  } else if(this.state.cate == 'majors') {
       axios.get('http://127.0.0.1:8000/api/auth/search/?nature=' + this.state.value).then(function (response) {
       console.log(response)
       }).catch(function (error) {
       console.log(error);
       });
-  } else if(this.state.cate == 'cause') {
+  } else if(this.state.cate == 'company') {
       axios.get('http://127.0.0.1:8000/api/auth/search/?cause=' + this.state.value).then(function (response) {
       console.log(response)
       }).catch(function (error) {
