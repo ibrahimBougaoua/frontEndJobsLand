@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 
 // handle button click of login form
-async function listMovies() {
+async function listJo() {
     try {
-      const response = await axios.get('http://127.0.0.1:5000/movie/showlater/' + localStorage.getItem('email'));
+      const response = await axios.get('http://127.0.0.1:5002/job/showlater/' + localStorage.getItem('email'));
       console.log(response);
       return response;
     } catch (error) {
@@ -17,7 +17,7 @@ async function listMovies() {
 export default class Interesse extends Component {
 
     state = {
-        movies: []
+        jobs: []
       }
     
       componentDidMount =()=>{
@@ -30,7 +30,7 @@ export default class Interesse extends Component {
 
 render() {
 
-const list = this.state.movies.map((element) => 
+const list = this.state.jobs.map((element) => 
 <div className="col-md-12">
 <div className="card mb-5 border-0 rounded-0 shadow-sm bg-light">
 <div className="row no-gutters">
