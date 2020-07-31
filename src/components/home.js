@@ -96,14 +96,14 @@ return (
                     <form method="POST" onSubmit={this.handleSubmit}>
           
           <div className="form-group col-md-12">
-              <input className="form-control form-control-lg" name="search" type="text" onChange={this.handleChangeValue} value={this.state.value} placeholder="Rechercher des problemes by sa nature" aria-label="Search" />          
+              <input className="form-control form-control-lg" name="search" type="text" onChange={this.handleChangeValue} value={this.state.value} placeholder="Rechercher by skills,Majors,company" aria-label="Search" />          
           </div>    
           
           <div className="form-group col-md-12">
         <select name="cate" class="form-control" value={this.state.cate} onChange={this.handleChangeCate}>
-  <option value="desc">Description</option>
-  <option value="nature">Nature</option>
-  <option value="cause">Cause</option>
+  <option value="skills">Skills</option>
+  <option value="majors">Majors</option>
+  <option value="company">Company</option>
 </select>
           </div>
 
