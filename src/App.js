@@ -50,14 +50,26 @@ function App() {
 
 { false ?
 <div className="mt-5 mb-5">
-      <form className="form-inline md-form form-sm mt-0 justify-content-center" method="POST" >
-          <input className="form-control form-control-sm" name="search" type="text" placeholder="Search Job title,Company..." aria-label="Search" style={{width:"48vw"}}/>          
-          <select name="cate" class="form-control form-control-sm ml-2">
-            <option value="title">Job title</option>
-            <option value="company">Company</option>
-          </select>
-          <button className="btn btn-sm btn-outline-info my-sm-0 ml-2" data-toggle="modal" data-target="#exampleModal" type="submit">Search</button>
-      </form>
+<form method="POST" onSubmit={this.handleSubmit}>
+          
+          <div className="form-group col-md-12">
+              <input className="form-control form-control-lg" name="search" type="text" onChange={this.handleChangeValue} value={this.state.value} placeholder="Rechercher des problemes by sa nature" aria-label="Search" />          
+          </div>    
+          
+          <div className="form-group col-md-12">
+        <select name="cate" class="form-control" value={this.state.cate} onChange={this.handleChangeCate}>
+  <option value="desc">Description</option>
+  <option value="nature">Nature</option>
+  <option value="cause">Cause</option>
+  <option value="localisation">Localisation</option>
+</select>
+          </div>
+
+          <div className="form-group col-md-6 ml-0">
+              <button className="btn btn-lg btn-outline-info my-lg-0" data-toggle="modal" data-target="#exampleModal" type="submit" onClick={handleSearch}>Search</button>
+          </div>
+    
+          </form>
 </div>
 : null }
 

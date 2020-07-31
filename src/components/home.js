@@ -3,7 +3,65 @@ import { Link } from "react-router-dom";
 
 export default class Home extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {all: [],value: '',cate: 'desc'};
+    this.handleChangeValue = this.handleChangeValue.bind(this);
+    this.handleChangeCate = this.handleChangeCate.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChangeValue(event) {
+    this.setState({value: event.target.value});
+  }
+
+  handleChangeCate(event) {
+    this.setState({cate: event.target.options[event.target.selectedIndex].value});
+  }
+  
+handleSubmit(event) {
+console.log('value : ' + this.state.value)
+console.log('cate : ' + this.state.cate)
+event.preventDefault();
+}
+
+  componentDidMount = () => {
+    all_signalisations().then(response => {
+        this.setState({
+            all: response.data
+        });
+    });
+  }
+  
 render() {
+// handle button click of signin form
+const handleSearch = () => {
+  if(this.state.cate == 'desc') {
+      axios.get('http://127.0.0.1:8000/api/auth/search/?desc=' + this.state.value).then(function (response) {
+      console.log(response)
+      }).catch(function (error) {
+      console.log(error);
+      });
+  } else if(this.state.cate == 'nature') {
+      axios.get('http://127.0.0.1:8000/api/auth/search/?nature=' + this.state.value).then(function (response) {
+      console.log(response)
+      }).catch(function (error) {
+      console.log(error);
+      });
+  } else if(this.state.cate == 'cause') {
+      axios.get('http://127.0.0.1:8000/api/auth/search/?cause=' + this.state.value).then(function (response) {
+      console.log(response)
+      }).catch(function (error) {
+      console.log(error);
+  });
+  } else if(this.state.cate == 'localisation') {
+      axios.get('http://127.0.0.1:8000/api/auth/search/?localisation=' + this.state.value).then(function (response) {
+        console.log(response)
+      }).catch(function (error) {
+          console.log(error);
+      });
+  }
+}
 
 const country = ["Afghanistan","Albania","Algeria","Andorra","Angola","Antigua and Barbuda","Argentina","Armenia","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bhutan","Bolivia","Bosnia and Herzegovi","Botswana","Brazil","Brunei","Bulgaria","Burkina Faso","Burundi","Côte d'Ivoire","Cabo Verde","Cambodia","Cameroon","Canada","Central African Repuc","Chad","Chile","China","Colombia","Comoros","Congo (Congo-Brazzave)","Costa Rica","Croatia","Cuba","Cyprus","Czechia (Czech Repub)","Democratic Republic the Congo","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Eswatini","Ethiopia","Fiji","Finland","France","Gabon","Gambia","Georgia","Germany","Ghana","Greece","Grenada","Guatemala","Guinea","Guinea-Bissau","Guyana","Haiti","Holy See","Honduras","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Italy","Jamaica","Japan","Jordan","Kazakhstan","Kenya","Kiribati","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","New Zealand","Nicaragua","Niger","Nigeria","North Korea","North Macedonia","Norway","Oman","Pakistan","Palau","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Qatar","Romania","Russia","Rwanda","Saint Kitts and Nevi","Saint Lucia","Saint Vincent and threnadines","Samoa","San Marino","Sao Tome and Princip","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Sweden","Switzerland","Syria","Tajikistan","Tanzania","Thailand","Timor-Leste","Togo","Tonga","Trinidad","Tunisia","Turkey","Turkmenistan","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States of Amea","Uruguay","Uzbekistan","Vanuatu","Venezuela","Vietnam","Yemen","Zambia","Zimbabwe","Afghanistan"]
 const listCountry = country.map((element) =>
