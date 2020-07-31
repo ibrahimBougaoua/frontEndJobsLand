@@ -241,12 +241,16 @@ export default class Signup extends Component {
 
     render() {
 
-    const {selectedM,selectedS} = this.state;
+    const {selectedM} = this.state;
+    const {selectedS} = this.state;
 
+
+    console.log("Majors : " + this.state.selectedM)
+    console.log("Skills : " + this.state.selectedS)
 
 // handle button click of signin form
 const handleSignin = () => {
-    axios.get('http://127.0.0.1:5002/job/singup/', {params : {fisrtname : this.state.fisrtname,lastname : this.state.lastname,email : this.state.email,password : this.state.password,sexe : this.state.sexe,age : this.state.age,country : this.state.country,telephone : this.state.telephone,majors : this.state.selectedM.toString()}})
+    axios.get('http://127.0.0.1:5002/job/singup/', {params : {fisrtname : this.state.fisrtname,lastname : this.state.lastname,email : this.state.email,password : this.state.password,sexe : this.state.sexe,age : this.state.age,country : this.state.country,telephone : this.state.telephone,majors : this.state.selectedM.toString(),skills : this.state.selectedM.toString()}})
     .then(response =>  {
       // setter
       //this.setState({errorMessage: response.data});
