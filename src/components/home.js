@@ -6,7 +6,7 @@ export default class Home extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {all: [],value: '',cate: 'desc'};
+    this.state = {all: [],value: '',cate: 'skills'};
     this.handleChangeValue = this.handleChangeValue.bind(this);
     this.handleChangeCate = this.handleChangeCate.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -27,40 +27,29 @@ event.preventDefault();
 }
 
   componentDidMount = () => {
-    all_signalisations().then(response => {
-        this.setState({
-            all: response.data
-        });
-    });
   }
 
 render() {
 // handle button click of signin form
 const handleSearch = () => {
   if(this.state.cate == 'skills') {
-      axios.get('http://127.0.0.1:5002/job/search/?=' + this.state.value).then(function (response) {
+      axios.get('http://127.0.0.1:5002/job/search/?search=' + this.state.value).then(function (response) {
       console.log(response)
       }).catch(function (error) {
       console.log(error);
       });
   } else if(this.state.cate == 'majors') {
-      axios.get('http://127.0.0.1:8000/api/auth/search/?nature=' + this.state.value).then(function (response) {
+      axios.get('http://127.0.0.1:8000/api/auth/search/?search=' + this.state.value).then(function (response) {
       console.log(response)
       }).catch(function (error) {
       console.log(error);
       });
   } else if(this.state.cate == 'company') {
-      axios.get('http://127.0.0.1:8000/api/auth/search/?cause=' + this.state.value).then(function (response) {
+      axios.get('http://127.0.0.1:8000/api/auth/search/?search=' + this.state.value).then(function (response) {
       console.log(response)
       }).catch(function (error) {
       console.log(error);
   });
-  } else if(this.state.cate == 'localisation') {
-      axios.get('http://127.0.0.1:8000/api/auth/search/?localisation=' + this.state.value).then(function (response) {
-        console.log(response)
-      }).catch(function (error) {
-          console.log(error);
-      });
   }
 }
 
@@ -115,7 +104,6 @@ return (
   <option value="desc">Description</option>
   <option value="nature">Nature</option>
   <option value="cause">Cause</option>
-  <option value="localisation">Localisation</option>
 </select>
           </div>
 
