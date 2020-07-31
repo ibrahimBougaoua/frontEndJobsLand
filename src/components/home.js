@@ -1,5 +1,16 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import axios from 'axios';
+
+async function all_signalisations() {
+  try {
+    const response = await axios.get('http://127.0.0.1:5002/job/auth/signalisation')
+    console.log(response);
+    return response;
+  } catch (error) {
+    console.error(error);
+  }
+}
 
 export default class Home extends Component {
 
@@ -32,7 +43,7 @@ event.preventDefault();
         });
     });
   }
-  
+
 render() {
 // handle button click of signin form
 const handleSearch = () => {
