@@ -114,79 +114,26 @@ return (
                   <div className="row">
                       
                     <div className="col-md-5">
-
-                    <div className="mt-3">
-                    <h1 className="load display-5 font-weight-bold" style={{color:"#007bff"}}>Offres d’emploi actives.</h1>
-                    <h1 className="lead display-5 font-weight-bold" style={{color:"#007bff"}}>Recruteurs actifs.</h1>
-                    </div>
-                    
-                    <div className="mt-5">
-                    <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
-  <li className="nav-item">
-    <a className="nav-link active" id="pills-offres-tab" data-toggle="pill" href="#pills-offres" role="tab" aria-controls="pills-offres" aria-selected="true">Offres d’emploi</a>
-  </li>
-  <li className="nav-item">
-    <a className="nav-link" id="pills-personnes-tab" data-toggle="pill" href="#pills-personnes" role="tab" aria-controls="pills-personnes" aria-selected="false">Personnes</a>
-  </li>
-</ul>
-<div className="tab-content ml-0 mr-0" id="pills-tabContent">
-  <div className="tab-pane fade show active" id="pills-offres" role="tabpanel" aria-labelledby="pills-offres-tab">
-  <div className="mt-3">
-      <form method="POST">
+                    <form method="POST" onSubmit={this.handleSubmit}>
           
-      <div className="form-group row ml-0">
-          <input className="form-control form-control-lg" name="search" type="text" placeholder="Rechercher des emplois ou des entreprises" aria-label="Search" />          
-      </div>    
-      
-      <div className="form-group row ml-0">
-          <select name="cate" class="form-control form-control-lg">
-            <option value="emplois">emplois</option>
-            <option value="entreprises">entreprises</option>
-          </select>
-      </div>
-
-      <div className="form-group row ml-0">
-          <select name="country" class="form-control form-control-lg">
-            {listCountry}
-          </select>
-      </div>    
-      
-      <div className="form-group row ml-0">
-          <button className="btn btn-lg btn-outline-primary my-lg-0" data-toggle="modal" data-target="#exampleModal" type="submit">Search</button>
-      </div>
-
-      </form>
-  </div>
-  </div>
-  <div className="tab-pane fade" id="pills-personnes" role="tabpanel" aria-labelledby="pills-personnes-tab">
-  <div className="mt-3">
-      <form method="POST">
+          <div className="form-group col-md-12">
+              <input className="form-control form-control-lg" name="search" type="text" onChange={this.handleChangeValue} value={this.state.value} placeholder="Rechercher des problemes by sa nature" aria-label="Search" />          
+          </div>    
           
-      <div className="form-group row ml-0">
-          <input className="form-control form-control-lg" name="prenom" type="text" placeholder="Prénom" aria-label="prenom" />          
-      </div>    
+          <div className="form-group col-md-12">
+        <select name="cate" class="form-control" value={this.state.cate} onChange={this.handleChangeCate}>
+  <option value="desc">Description</option>
+  <option value="nature">Nature</option>
+  <option value="cause">Cause</option>
+  <option value="localisation">Localisation</option>
+</select>
+          </div>
 
-      <div className="form-group row ml-0">
-          <input className="form-control form-control-lg" name="nom" type="text" placeholder="Nom" aria-label="nom" />          
-      </div>    
-      
-      <div className="form-group row ml-0">
-          <select name="country" class="form-control form-control-lg">
-            {listAge}
-          </select>
-      </div>    
-
-      <div className="form-group row ml-0">
-          <button className="btn btn-lg btn-outline-primary my-lg-0" data-toggle="modal" data-target="#exampleModal" type="submit">Search</button>
-      </div>
-
-      </form>
-  </div>
-  </div>
-</div>
-
-</div>
-
+          <div className="form-group col-md-6 ml-0">
+              <button className="btn btn-lg btn-outline-info my-lg-0" data-toggle="modal" data-target="#exampleModal" type="submit" onClick={handleSearch}>Search</button>
+          </div>
+    
+          </form>
                     </div>
                     <div className="col-md-7">
                     <img src="background.png" className="w-100 h-100 mt-2 rounded" alt=""/>
