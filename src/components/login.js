@@ -35,7 +35,7 @@ export default class Login extends Component {Redirect
 
 // handle button click of login form
 const handleLogin = () => {
-    axios.get('http://localhost:5002/job/login', {params : {username: this.state.email,  password:this.state.password}})
+    axios.get('http://127.0.0.1:5002/job/login/', {params : {username: this.state.email,  password:this.state.password}})
     .then(response => {
       // setter
       this.setState({loading: true})
