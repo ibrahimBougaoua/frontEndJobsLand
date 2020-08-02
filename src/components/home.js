@@ -78,6 +78,8 @@ return (
 {this.state.majors}
 
 <Post name="Recommended by Majors" link="/account/single/" elements={this.state.majors}></Post>
+<Post name="Recommended by Skills" link="/account/single/" elements={this.state.majors}></Post>
+<Post name="Recommended by City" link="/account/single/" elements={this.state.majors}></Post>
 
 { false ?
     <div className="m-0 p-0">    
