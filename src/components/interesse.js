@@ -23,14 +23,14 @@ export default class Interesse extends Component {
       componentDidMount =()=>{
         listJobs().then(response => {
           this.setState({
-            movies: [['job one','description one','https://images.pexels.com/photos/3815585/pexels-photo-3815585.jpeg?cs=srgb&dl=person-writing-on-white-paper-3815585.jpg&fm=jpg'],['job tow','description tow','https://images.pexels.com/photos/3815585/pexels-photo-3815585.jpeg?cs=srgb&dl=person-writing-on-white-paper-3815585.jpg&fm=jpg'],['job three','description three','https://images.pexels.com/photos/3815585/pexels-photo-3815585.jpeg?cs=srgb&dl=person-writing-on-white-paper-3815585.jpg&fm=jpg'],['job four','description four','https://images.pexels.com/photos/3815585/pexels-photo-3815585.jpeg?cs=srgb&dl=person-writing-on-white-paper-3815585.jpg&fm=jpg'],['job five','description five','https://images.pexels.com/photos/3815585/pexels-photo-3815585.jpeg?cs=srgb&dl=person-writing-on-white-paper-3815585.jpg&fm=jpg']]
+            jobs: response.data
           });
         });
       }
 
 render() {
 
-const list = this.state.jobs.map((element) => 
+const listOfJobs = this.state.jobs.map((element) => 
 <div className="col-md-12">
 <div className="card mb-5 border-0 rounded-0 shadow-sm bg-light">
 <div className="row no-gutters">
@@ -39,9 +39,9 @@ const list = this.state.jobs.map((element) =>
     </div>
     <div className="col-md-10">
         <div className="card-body">
-            <small className="card-title">{element[0]}</small><br />
+            <small className="card-title">{element[5]}</small><br />
             <small className="text-muted">{element[1]}</small><br />
-            <Link className="btn btn-primary btn-sm position-relative" to={"/interesse/single/" + element[0]} style={{top: "15px"}}>Show more</Link>
+            <Link className="btn btn-primary btn-sm position-relative" to={"/single/" + element[10]} style={{top: "15px"}}>Show more</Link>
         </div>
     </div>
 </div>
@@ -57,7 +57,7 @@ return (
     <p className="lead text-sm-left">interesse</p>
 
     <div className="row">
-    {list}
+    {listOfJobs}
     </div>
 
     </div>

@@ -42,7 +42,7 @@ state = { enable: false,job: [],related: [] };
     
       componentDidMount =()=>{
         ifShowLater(this.props.match.params.id).then(response => {
-          console.log(response.data)
+          console.log('if Show Later : ' +  response.data)
           if(response.data === 'yes'){
             this.setState({
               enable: true
