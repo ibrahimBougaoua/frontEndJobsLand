@@ -6,7 +6,7 @@ const listItems = (elements) => {
     return ( elements.map((element) => 
     <div className="card card-home mb-3">
       <div class="card-body">
-        <h6 class="card-title text-sm">{element[1]}</h6>
+        <h6 class="text-sm text-dark">{element[1]}</h6>
         <p class="text-sm text-muted">{element[0]}</p>
         <Link to={props.link + element[0]} className="btn btn-sm btn-info">More</Link>
       </div>
