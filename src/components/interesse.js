@@ -34,9 +34,6 @@ const listOfJobs = this.state.jobs.map((element) =>
 <div className="col-md-12">
 <div className="card mb-5 border-0 rounded-0 shadow-sm bg-light">
 <div className="row no-gutters">
-    <div className="col-md-2">
-        <img src={element[2]} class="card-img rounded-0" alt="..." />
-    </div>
     <div className="col-md-10">
         <div className="card-body">
             <small className="card-title">{element[5]}</small><br />
