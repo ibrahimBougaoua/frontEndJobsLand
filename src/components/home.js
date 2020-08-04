@@ -14,11 +14,22 @@ async function recommendedMajors() {
   }
 }
 
+// handle button click of login form
+async function recommendedSkills() {
+  try {
+    const response = await axios.get('http://127.0.0.1:5002/job/recommended/skills/R');
+    console.log(response);
+    return response;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 export default class Home extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {all: [],value: '',cate: 'skills',majors: []};
+    this.state = {all: [],value: '',cate: 'skills',majors: [],skills: []};
     this.handleChangeValue = this.handleChangeValue.bind(this);
     this.handleChangeCate = this.handleChangeCate.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -40,9 +51,13 @@ event.preventDefault();
 
   componentDidMount = () => {
     recommendedMajors().then(response => {
-    console.log('zzzzzzzzzzz : ' + response.data)
 	  this.setState({
       majors: response.data
+  	});
+	  });
+    recommendedSkills().then(response => {
+	  this.setState({
+      skills: response.data
   	});
 	  });
   }
@@ -77,6 +92,7 @@ return (
 <div className="container-fluid m-0 p-0">
 
 <Post name="Recommended by Majors" link="/account/single/" elements={this.state.majors}></Post>
+<Post name="Recommended by Skills" link="/account/single/" elements={this.state.skills}></Post>
 
 { false ?
     <div className="m-0 p-0">    
