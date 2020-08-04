@@ -25,11 +25,22 @@ async function recommendedSkills() {
   }
 }
 
+// handle button click of login form
+async function recommendedCity() {
+  try {
+    const response = await axios.get('http://127.0.0.1:5002/job/recommended/city/MA');
+    console.log(response);
+    return response;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 export default class Home extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {all: [],value: '',cate: 'skills',majors: [],skills: []};
+    this.state = {all: [],value: '',cate: 'skills',majors: [],skills: [],city: []};
     this.handleChangeValue = this.handleChangeValue.bind(this);
     this.handleChangeCate = this.handleChangeCate.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -58,6 +69,11 @@ event.preventDefault();
     recommendedSkills().then(response => {
 	  this.setState({
       skills: response.data
+  	});
+	  });
+    recommendedCity().then(response => {
+	  this.setState({
+      city: response.data
   	});
 	  });
   }
@@ -93,6 +109,7 @@ return (
 
 <Post name="Recommended by Majors" link="single/" elements={this.state.majors}></Post>
 <Post name="Recommended by Skills" link="single/" elements={this.state.skills}></Post>
+<Post name="Recommended by City" link="single/" elements={this.state.city}></Post>
 
 { false ?
     <div className="m-0 p-0">    
