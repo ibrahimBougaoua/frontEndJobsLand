@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import BeautyStars from 'beauty-stars';
+import { Link } from "react-router-dom";
 import axios from 'axios';
+import Post from "./post";
 
 // handle button click of login form
 async function singleJob(id) {
@@ -99,9 +100,15 @@ const singleJob = this.state.job.map((element) =>
 	<div className="row no-gutters">
 
 	<div className="card-body">
-    <h5 className="card-title">Service Specialist I or II</h5>
-    <h6 className="card-subtitle mb-2 text-muted">Idaho Power Company</h6>
-    <p className="card-text">Dependent upon location may pay bills, maintain office supply inventory, deposit meter specialist collections, act as Record Retention Coordinator, maintain…</p>
+    <h5 className="card-title">{element[5]}</h5>
+    <h6 className="card-subtitle mb-2 text-muted">{element[1]}</h6>
+    <p className="card-text">{element[2]}</p>
+    <p className="card-text">{element[3]}</p>
+    <p className="card-text">{element[4]}</p>
+    <p className="card-text">{element[6]}</p>
+    <p className="card-text">{element[7]}</p>
+    {element[8].split(',').map((element) => <button type="submit" className="btn btn-sm btn-info mr-2" >{element}</button>)}
+    <p className="card-text">{element[9]}</p>
 
   {
   this.state.enable
@@ -111,7 +118,6 @@ const singleJob = this.state.job.map((element) =>
 	<small className="text-muted">{element[6]}</small><br />
 	<small className="text-muted">{element[11]}</small><br />
   <button type="button" className="btn btn-sm btn-info mr-2 mt-2 mb-2 float-right position-relative" data-toggle="modal" data-target="#exampleModal" style={{ top: "0vw",left: "1vw" }}>More details</button>
-	<BeautyStars className="text-sm" value={this.state.value} onChange={value => {this.setState({ value });rating(value,this.props.match.params.id);}} />
 	</div>
 	</div>
   
@@ -133,16 +139,7 @@ const singleJob = this.state.job.map((element) =>
 	<div className="col-md-9">
 	<div className="card-body">
 	<h5 className="card-title">{element[3]}</h5>
-	<small className="text-muted"><b>released : </b>{element[4]}</small><br />
-	<small className="text-muted"><b>year : </b>{element[5]}</small><br />
-	<small className="text-muted"><b>runtime : </b>{element[6]}</small><br />
-	<small className="text-muted"><b>director : </b>{element[8]}</small><br />
-	<small className="text-muted"><b>writer : </b>{element[9]}</small><br />
-	<small className="text-muted"><b>plot : </b>{element[11]}</small><br />
-	<small className="text-muted"><b>country : </b>{element[12]}</small><br />
-	<small className="text-muted"><b>production : </b>{element[15]}</small><br />
-	<small className="text-muted"><b>boxOffice : </b>{element[16]}</small><br />
-	<small className="text-muted"><b>views : </b>{element[17]}</small><br />
+	<small className="text-muted"><b>Title : </b>{element[5]}</small><br />
 	</div>
 	</div>
 	</div>
@@ -164,71 +161,7 @@ return (
 {singleJob}
 
 
-
-<p className="lead">Related Jobs</p>
-
-
-<div className="row">
-<div className="col-md-12">
-<div class="card-group">
-<div className="card border-0 mr-2 shadow p-3 mb-5 bg-white rounded">
-<div className="card-body">
-<h5 className="card-title">Service Specialist I or II</h5>
-<h6 className="card-subtitle mb-2 text-muted">Idaho Power Company</h6>
-<p className="card-text">Dependent upon location may pay bills, maintain office supply inventory, deposit meter specialist collections, act as Record Retention Coordinator, maintain…</p>
-<a href="a" className="card-link btn btn-sm btn-outline-primary">Read more</a>
-</div>
-</div>
-<div className="card border-0 mr-2 shadow p-3 mb-5 bg-white rounded">
-<div className="card-body">
-<h5 className="card-title">Service Specialist I or II</h5>
-<h6 className="card-subtitle mb-2 text-muted">Idaho Power Company</h6>
-<p className="card-text">Dependent upon location may pay bills, maintain office supply inventory, deposit meter specialist collections, act as Record Retention Coordinator, maintain…</p>
-<a href="a" className="card-link btn btn-sm btn-outline-primary">Read more</a>
-</div>
-</div>
-<div className="card border-0 shadow p-3 mb-5 bg-white rounded">
-<div className="card-body">
-<h5 className="card-title">Service Specialist I or II</h5>
-<h6 className="card-subtitle mb-2 text-muted">Idaho Power Company</h6>
-<p className="card-text">Dependent upon location may pay bills, maintain office supply inventory, deposit meter specialist collections, act as Record Retention Coordinator, maintain…</p>
-<a href="a" className="card-link btn btn-sm btn-outline-primary">Read more</a>
-</div>
-</div>
-
-</div>
-</div>
-<div className="col-md-12">
-<div class="card-group">
-<div className="card border-0 mr-2 shadow p-3 mb-5 bg-white rounded">
-<div className="card-body">
-<h5 className="card-title">Service Specialist I or II</h5>
-<h6 className="card-subtitle mb-2 text-muted">Idaho Power Company</h6>
-<p className="card-text">Dependent upon location may pay bills, maintain office supply inventory, deposit meter specialist collections, act as Record Retention Coordinator, maintain…</p>
-<a href="a" className="card-link btn btn-sm btn-outline-primary">Read more</a>
-</div>
-</div>
-<div className="card border-0 mr-2 shadow p-3 mb-5 bg-white rounded">
-<div className="card-body">
-<h5 className="card-title">Service Specialist I or II</h5>
-<h6 className="card-subtitle mb-2 text-muted">Idaho Power Company</h6>
-<p className="card-text">Dependent upon location may pay bills, maintain office supply inventory, deposit meter specialist collections, act as Record Retention Coordinator, maintain…</p>
-<a href="a" className="card-link btn btn-sm btn-outline-primary">Read more</a>
-</div>
-</div>
-<div className="card border-0 shadow p-3 mb-5 bg-white rounded">
-<div className="card-body">
-<h5 className="card-title">Service Specialist I or II</h5>
-<h6 className="card-subtitle mb-2 text-muted">Idaho Power Company</h6>
-<p className="card-text">Dependent upon location may pay bills, maintain office supply inventory, deposit meter specialist collections, act as Record Retention Coordinator, maintain…</p>
-<a href="a" className="card-link btn btn-sm btn-outline-primary">Read more</a>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
+<Post name="Related Jobs" link="single/" elements={this.state.related}></Post>
 
 </div>
 );
