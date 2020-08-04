@@ -8,7 +8,7 @@ const listItems = (elements) => {
       <div class="card-body">
         <h6 class="text-sm text-dark">{element[1]}</h6>
         <p class="text-sm text-muted">{element[0]}</p>
-        <Link to={props.link + element[0]} className="btn btn-sm btn-info">More</Link>
+        <Link to={props.link + element[12]} className="btn btn-sm btn-info">More</Link>
       </div>
     
     </div>

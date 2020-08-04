@@ -68,7 +68,7 @@ function App() {
         <Route path="/profile" exact component={Profile} />
         <Route path="/interesse" exact component={Interesse} />
         <Route path="/history" exact component={History} />
-        <Route path="/single" exact component={Single} />
+        <Route path="/single/:id" exact component={Single} />
       </Switch>
           
     </div>

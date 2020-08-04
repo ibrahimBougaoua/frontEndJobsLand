@@ -91,8 +91,8 @@ const listSugg = sugg.map((element) =>
 return (
 <div className="container-fluid m-0 p-0">
 
-<Post name="Recommended by Majors" link="/account/single/" elements={this.state.majors}></Post>
-<Post name="Recommended by Skills" link="/account/single/" elements={this.state.skills}></Post>
+<Post name="Recommended by Majors" link="single/" elements={this.state.majors}></Post>
+<Post name="Recommended by Skills" link="single/" elements={this.state.skills}></Post>
 
 { false ?
     <div className="m-0 p-0">    
