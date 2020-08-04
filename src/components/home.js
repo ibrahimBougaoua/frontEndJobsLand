@@ -72,12 +72,20 @@ const listSugg = sugg.map((element) =>
 <Link className="btn btn-outline-light btn-lg m-1" to={this.props.path + element}>{element}</Link>
 );
 
+const c = this.state.majors.map((element) => element.map((el) => 
+    <div className="card card-home">
+      <div class="card-body">
+        <h5 class="card-title">{el[1]}</h5>
+        <p class="card-text">{el[3]}</p>
+        <Link to={ el[0]} className="btn btn-primary">More</Link>
+      </div>
+    </div>
+));
+
 return (
 <div className="container-fluid m-0 p-0">
-
+{c}
 <Post name="Recommended by Majors" link="/account/single/" elements={this.state.majors}></Post>
-<Post name="Recommended by Skills" link="/account/single/" elements={this.state.majors}></Post>
-<Post name="Recommended by City" link="/account/single/" elements={this.state.majors}></Post>
 
 { false ?
     <div className="m-0 p-0">    
