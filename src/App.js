@@ -9,6 +9,7 @@ import Signup from "./components/signup";
 import Profile from "./components/profile";
 import Interesse from "./components/interesse";
 import History from "./components/history";
+import Abonnements from "./components/abonnements";
 import Single from "./components/single";
 
 function App() {
@@ -28,6 +29,9 @@ function App() {
   <ul className="navbar-nav ml-auto">
               <li className="nav-item">
                 <Link className="btn btn-sm btn-outline-primary mr-2" to={"/interesse"}>Intéressé</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="btn btn-sm btn-outline-primary mr-2" to={"/abonnements"}>Abonnements</Link>
               </li>
               <li className="nav-item">
                 <Link className="btn btn-sm btn-outline-primary mr-2" to={"/history"}>Historique</Link>
@@ -68,6 +72,7 @@ function App() {
         <Route path="/profile" exact component={Profile} />
         <Route path="/interesse" exact component={Interesse} />
         <Route path="/history" exact component={History} />
+        <Route path="/abonnements" exact component={Abonnements} />
         <Route path="/single/:id" exact component={Single} />
       </Switch>
           
