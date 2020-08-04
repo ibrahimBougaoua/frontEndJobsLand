@@ -10,6 +10,7 @@ import Profile from "./components/profile";
 import Interesse from "./components/interesse";
 import History from "./components/history";
 import Abonnements from "./components/abonnements";
+import Company from "./components/company";
 import Single from "./components/single";
 
 function App() {
@@ -73,6 +74,7 @@ function App() {
         <Route path="/interesse" exact component={Interesse} />
         <Route path="/history" exact component={History} />
         <Route path="/abonnements" exact component={Abonnements} />
+        <Route path="/company/:company" exact component={Company} />
         <Route path="/single/:id" exact component={Single} />
       </Switch>
           
