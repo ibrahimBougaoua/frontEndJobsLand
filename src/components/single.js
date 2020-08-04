@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import BeautyStars from 'beauty-stars';
 import axios from 'axios';
 
@@ -25,26 +24,6 @@ async function relatedJob(id) {
     }
   }
   
-async function getJobRating(id) {
-    try {
-      const response = await axios.get('http://localhost:5002/job/single/rating/id/' + id + '/email/' + localStorage.getItem('email'))
-      console.log(response);
-      return response;
-    } catch (error) {
-      console.error(error);
-    }
-}
-
-async function rating(rating_value,id) {
-  try {
-    const response = await axios.get('http://localhost:5002/job/single/id/' + id + '/rating/' + rating_value + '/email/' + localStorage.getItem('email'))
-    console.log(response);
-    return response;
-  } catch (error) {
-    console.error(error);
-  }
-}
-
 // handle button click of login form
 async function ifShowLater(id) {
   try {
@@ -58,7 +37,7 @@ async function ifShowLater(id) {
 
 export default class Single extends Component {
 
-state = { value: 0,enable: false,job: [''],related: [] };
+state = { enable: false,job: [],related: [] };
     
       componentDidMount =()=>{
         ifShowLater(this.props.match.params.id).then(response => {
@@ -68,6 +47,16 @@ state = { value: 0,enable: false,job: [''],related: [] };
               enable: true
             });
           }
+        });
+        singleJob(this.props.match.params.id).then(response => {
+          this.setState({
+            job: response.data
+          });
+        });
+        relatedJob(this.props.match.params.id).then(response => {
+          this.setState({
+            related: response.data
+          });
         });
       }
 
