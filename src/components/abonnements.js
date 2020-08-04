@@ -48,11 +48,10 @@ export default class Abonnement extends Component {
 
 render() {
 
+    console.log(this.state.companies)
 
 	const actors = this.state.companies.map((element) => 
-
-	
-    <div className="col-md-3">
+    <div className="col-md-4">
     <div className="card mb-5 border-0 rounded-0 shadow-sm bg-light">
 	<div className="row no-gutters">
 		<div className="col-md-4">
@@ -60,8 +59,8 @@ render() {
 		</div>
 		<div className="col-md-8">
 			<div className="pl-2">
-                <p className="text-sm-left">{element}</p>
-                <Link className="btn btn-success btn-sm position-relative" to={"/account/actor/" + element} style={{bottom: "3px"}}>Show more</Link>
+                <p className="text-sm-left">{element[2]}</p>
+                <Link className="btn btn-success btn-sm position-relative" to={"/company/" + element[2]} style={{bottom: "3px"}}>Show more</Link>
 			</div>
 		</div>
 	</div>
@@ -72,18 +71,16 @@ render() {
 
 
 return (
-    <div>
-
-    <div className="container">
+    <div className="container mt-3">
 
     <div className="row">
     {actors}
     </div>
         
     <Post name="Abonnements" link="/single/" elements={this.state.jobs}></Post>
-    </div>
 
     </div>
+
 );
 }
 }

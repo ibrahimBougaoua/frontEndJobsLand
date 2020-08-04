@@ -15,10 +15,7 @@ const listItems = (elements) => {
 ));
 }
 
-return <div className="container">
-
-
-<div className="col-md-12 mb-5">
+return <div className="col-md-12 mb-5">
 <p className=" text-sm-left">{props.name}</p>
 <div className="card-deck mb-1">
     {listItems(props.elements.slice(0,5))}
@@ -28,7 +25,6 @@ return <div className="container">
     {listItems(props.elements.slice(5,10))}
 </div>
 
-</div>
 </div>;
 
 }
