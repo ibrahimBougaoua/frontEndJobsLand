@@ -61,7 +61,14 @@ export default class Single extends Component {
 state = { value: 0,enable: false,job: [''],related: [] };
     
       componentDidMount =()=>{
-
+        ifShowLater(this.props.match.params.id).then(response => {
+          console.log(response.data)
+          if(response.data === 'yes'){
+            this.setState({
+              enable: true
+            });
+          }
+        });
       }
 
 render() {
