@@ -161,36 +161,6 @@ return (
 </div>
 
 
-        <div className="col-md-12">    
-            <div className="jumbotron jumbotron-fluid">
-                <div className="container">
-                <div class="row">
-                <div class="col-md-8 offset-md-2">
-                    <h3 className="load float-left font-weight-bold">Recherches récentes</h3>
-                    <button type="submit" className="btn btn-primary float-right">Effacer</button>
-                </div>
-                <div class="col-md-8 offset-md-2">
-                    <ul class="list-group mt-3">
-  <li class="list-group-item d-flex justify-content-between align-items-center">
-    job exmple one
-    <span class="badge badge-primary badge-pill">14</span>
-  </li>
-  <li class="list-group-item d-flex justify-content-between align-items-center">
-    job exmple tow
-    <span class="badge badge-primary badge-pill">2</span>
-  </li>
-  <li class="list-group-item d-flex justify-content-between align-items-center">
-    job exmple three
-    <span class="badge badge-primary badge-pill">1</span>
-  </li>
-</ul>
-</div>
-                </div>
-
-                </div>
-            </div>
-        </div>
-
 
 
       <div className="container">
