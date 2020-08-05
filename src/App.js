@@ -55,7 +55,7 @@ function App() {
 
 { false ?
 <div className="mt-5 mb-5">
-      <form className="form-inline md-form form-sm mt-0 justify-content-center" method="POST" >
+      <form className="form-inline md-form form-sm mt-0 p-2 justify-content-center" method="POST" >
           <input className="form-control form-control-sm" name="search" type="text" placeholder="Search Job title,Company..." aria-label="Search" style={{width:"48vw"}}/>          
           <select name="cate" class="form-control form-control-sm ml-2">
             <option value="title">Job title</option>
