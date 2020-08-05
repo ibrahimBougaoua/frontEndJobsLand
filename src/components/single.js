@@ -107,7 +107,7 @@ const singleJob = this.state.job.map((element) =>
     <p className="card-text">{element[4]}</p>
     <p className="card-text">{element[6]}</p>
     <p className="card-text">{element[7]}</p>
-    {element[8].split(',').map((element) => <button type="submit" className="btn btn-sm btn-info mr-2" >{element}</button>)}
+    {element[8].split(',').map((element) => <button type="submit" className="btn btn-sm btn-info mr-2" >{element.replace(/'/g, "").replace("[", "").replace("]", "")}</button>)}
     <p className="card-text">{element[9]}</p>
 
   {
