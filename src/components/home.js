@@ -109,14 +109,13 @@ return (
 
     <div className="row justify-content-center">
 
-        <div className="col-md-12">    
-            <div className="jumbotron jumbotron-fluid">
+        <div className="col-md-12 mt-5">    
               
                 <div className="container">
                   <div className="row">
                       
                     <div className="col-md-5">
-
+                    
                 <h1 className="display-5 text-info font-weight-bold ml-3 w-100">Offres d’emploi actives.</h1>
                 <p className="lead text-info ml-3">Recruteurs actifs.</p>
 
@@ -139,18 +138,19 @@ return (
           </div>
     
           </form>
+
+          <img src="undraw_people_search_wctu.svg" className="w-50 h-50 mt-2 rounded" alt=""/>
+
                     </div>
                     <div className="col-md-7">
-                    <img src="background.png" className="w-100 h-100 mt-2 rounded" alt=""/>
+                    <img src="undraw_interview_rmcf.svg" className="w-100 h-100 rounded" alt=""/>
                     </div>
                     </div>
                 </div>
-            </div>
+        </div>
         </div>
 
-
-
-    <div className="col-md-12 bg-info mt-0">
+    <div className="col-md-12 bg-inf">
             <div className="jumbotron jumbotron-fluid">
                 <div className="container">
                 <h1 className="display-5 text-center text-white font-weight-bold">Publiez votre offre d’emploi et trouvez les personnes dont vous avez besoin.</h1>
@@ -485,11 +485,6 @@ return (
     </div>
 </div>
 
-
-
-
-
-    </div>
 </div>
 );
 }
