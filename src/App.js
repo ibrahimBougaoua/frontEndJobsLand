@@ -21,7 +21,7 @@ function App() {
     <div className="container-fluid m-0 p-0">
 
 
-<nav class="navbar navbar-expand-lg navbar-dark container">
+<nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
   <Link className="navbar-brand text-primary" to={"/"}>Trouver un travail</Link>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>

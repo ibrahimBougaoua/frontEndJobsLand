@@ -16,7 +16,7 @@ const listItems = (elements) => {
 }
 
 return <div className="col-md-12 mb-5">
-<h6 className="text-sm-left" style={{borderLeftColor: "#17a2b8",padding: "1.25rem",marginTop: "1.25rem",marginBottom: "1.25rem",border: "1px solid #17a2b8",borderLeftWidth: ".25rem",borderRadius: "0px",Color: "#5bc0de"}}>{props.name}</h6>
+<h6 className="text-sm-left" style={{border: "#",color: "#17a2b8",padding: "1.25rem",marginTop: "1.25rem",marginBottom: "1.25rem",border: "1px solid #17a2b8",borderLeftWidth: ".25rem",borderRadius: "0px",Color: "#5bc0de"}}>{props.name}</h6>
 <div className="card-deck mb-1">
     {listItems(props.elements.slice(0,5))}
 </div>
