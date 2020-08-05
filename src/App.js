@@ -29,25 +29,25 @@ function App() {
   <div class="collapse navbar-collapse" id="navbarNav">
   <ul className="navbar-nav ml-auto">
               <li className="nav-item">
-                <Link className="btn btn-sm btn-outline-primary mr-2" to={"/interesse"}>Intéressé</Link>
+                <Link className="btn btn-sm btn-outline-info mr-2" to={"/interesse"}>Intéressé</Link>
               </li>
               <li className="nav-item">
-                <Link className="btn btn-sm btn-outline-primary mr-2" to={"/abonnements"}>Abonnements</Link>
+                <Link className="btn btn-sm btn-outline-info mr-2" to={"/abonnements"}>Abonnements</Link>
               </li>
               <li className="nav-item">
-                <Link className="btn btn-sm btn-outline-primary mr-2" to={"/history"}>Historique</Link>
+                <Link className="btn btn-sm btn-outline-info mr-2" to={"/history"}>Historique</Link>
               </li>
               <li className="nav-item">
-                <Link className="btn btn-sm btn-outline-primary mr-2" to={"/profile"}>Profile</Link>
+                <Link className="btn btn-sm btn-outline-info mr-2" to={"/profile"}>Profile</Link>
               </li>
               <li className="nav-item">
-                <Link className="btn btn-sm btn-outline-primary mr-2" to={"/signup"}>S’inscrire</Link>
+                <Link className="btn btn-sm btn-outline-info mr-2" to={"/signup"}>S’inscrire</Link>
               </li>
               <li className="nav-item">
-                <Link className="btn btn-sm btn-outline-primary mr-2" to={"/login"}>S’identifier</Link>
+                <Link className="btn btn-sm btn-outline-info mr-2" to={"/login"}>S’identifier</Link>
               </li>
               <li className="nav-item">
-                <Link className="btn btn-sm btn-outline-primary" to={"/deconnexion"}>Déconnexion</Link>
+                <Link className="btn btn-sm btn-outline-info" to={"/deconnexion"}>Déconnexion</Link>
               </li>
     </ul>
   </div>
