@@ -107,9 +107,9 @@ const listSugg = sugg.map((element) =>
 return (
 <div className="container-fluid m-0 p-0">
 
-    <div className="row justify-content-center">
+    <div className="row justify-content-center mt-5 mb-5">
 
-        <div className="col-md-12 mt-5">    
+        <div className="col-md-12">    
               
                 <div className="container">
                   <div className="row">
@@ -150,13 +150,15 @@ return (
         </div>
         </div>
 
-    <div className="col-md-12 bg-inf">
+<div className="row mt-5">
+    <div className="col-md-12 bg-info">
             <div className="jumbotron jumbotron-fluid">
                 <div className="container">
                 <h1 className="display-5 text-center text-white font-weight-bold">Publiez votre offre d’emploi et trouvez les personnes dont vous avez besoin.</h1>
                 </div>
             </div>
     </div>
+</div>
 
 
         <div className="col-md-12">    
