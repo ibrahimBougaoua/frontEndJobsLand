@@ -18,7 +18,7 @@ async function companies() {
 // handle button click of login form
 async function jobs() {
     try {
-      const response = await axios.get('http://127.0.0.1:5002/job/abonnements/' + localStorage.getItem('email'));
+      const response = await axios.get('http://127.0.0.1:5002/job/abonnements/alljobs/email/' + localStorage.getItem('email'));
       console.log(response);
       return response;
     } catch (error) {
@@ -75,7 +75,7 @@ return (
     {companies}
     </div>
         
-    <Post name="Abonnements" link="/single/" elements={this.state.jobs}></Post>
+    <Post name="jobs" link="/single/" elements={this.state.jobs}></Post>
 
     </div>
 

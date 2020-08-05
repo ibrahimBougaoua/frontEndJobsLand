@@ -102,7 +102,7 @@ const singleJob = this.state.job.map((element) =>
 	<div className="card-body">
     <h5 className="card-title">{element[5]}</h5>
     <h6 className="card-subtitle mb-2 text-muted">{element[1]}</h6>
-    <p className="card-text">{element[2]}</p>
+    <p className="card-text">Company : <Link to={'/company/' + element[2]} className="btn btn-sm btn-info"> {element[2]}</Link></p>
     <p className="card-text">{element[3]}</p>
     <p className="card-text">{element[4]}</p>
     <p className="card-text">{element[6]}</p>
@@ -133,10 +133,7 @@ const singleJob = this.state.job.map((element) =>
       <div className="modal-body">
       <div className="card border-0 rounded-0 shadow-sm bg-light">
 	<div className="row no-gutters">
-	<div className="col-md-3">
-		<img src={element[13]} class="card-img rounded-0" alt="..." />
-	</div>
-	<div className="col-md-9">
+	<div className="col-md-12">
 	<div className="card-body">
 	<h5 className="card-title">{element[3]}</h5>
 	<small className="text-muted"><b>Title : </b>{element[5]}</small><br />
