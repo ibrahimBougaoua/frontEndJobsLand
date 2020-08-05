@@ -107,7 +107,7 @@ const singleJob = this.state.job.map((element) =>
     : <p className="card-text"><button type="submit" className="btn btn-sm btn-danger float-right position-relative" onClick={new_show_later}>Intéressé</button></p>
   }
     <h5 className="card-title mb-4">Title : {element[5]}</h5>
-    <h6 className="card-subtitle mb-2 text-muted mb-4">published : {element[1]}</h6>
+    <p className="card-subtitle mb-2 text-muted mb-4">published : {element[1]}</p>
     <p className="card-subtitle text-muted mb-4">Company : <Link to={'/company/' + element[2]} className="btn btn-sm btn-outline-info"> {element[2]}</Link></p>
     <p className="card-subtitle text-muted mb-4">Eligibility : {element[4]}</p>
     <p className="card-subtitle text-muted mb-4">Job Description : {element[6]}</p>
@@ -131,16 +131,16 @@ const singleJob = this.state.job.map((element) =>
       <div className="card border-0 rounded-0 shadow-sm bg-light">
 	<div className="row no-gutters">
 	<div className="col-md-12">
-	<div className="card-body">
-    <h5 className="card-title">Title : {element[5]}</h5>
-    <h6 className="card-subtitle mb-2 text-muted">published : {element[1]}</h6>
-    <p className="card-text">Company : <Link to={'/company/' + element[2]} className="btn btn-sm btn-info"> {element[2]}</Link></p>
-    <p className="card-text">Required Qual : {element[3]}</p>
-    <p className="card-text">Eligibility : {element[4]}</p>
-    <p className="card-text">Job Description : {element[6]}</p>
-    <p className="card-text">Job Requirment : {element[7]}</p>
-    Skills : {element[8].split(',').map((element) => <button type="submit" className="btn btn-sm btn-info mr-2" >{element.replace(/'/g, "").replace("[", "").replace("]", "")}</button>)}<br />
-    <p className="card-text">Location : {element[9]}</p>
+	<div className="card-body bg-white">
+    <h5 className="card-title mb-4">Title : {element[5]}</h5>
+    <p className="card-subtitle text-muted mb-4">published : {element[1]}</p>
+    <p className="card-subtitle text-muted mb-4">Company : <Link to={'/company/' + element[2]} className="btn btn-sm btn-info"> {element[2]}</Link></p>
+    <p className="card-subtitle text-muted mb-4">Required Qual : {element[3]}</p>
+    <p className="card-subtitle text-muted mb-4">Eligibility : {element[4]}</p>
+    <p className="card-subtitle text-muted mb-4">Job Description : {element[6]}</p>
+    <p className="card-subtitle text-muted mb-4">Job Requirment : {element[7]}</p>
+    <p className="card-subtitle text-muted mb-4">Skills : {element[8].split(',').map((element) => <button type="submit" className="btn btn-sm btn-outline-info mr-2" >{element.replace(/'/g, "").replace("[", "").replace("]", "")}</button>)}</p>
+    <p className="card-subtitle text-muted mb-4">Location : {element[9]}</p>
 	</div>
 	</div>
 	</div>
