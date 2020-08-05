@@ -117,8 +117,8 @@ return (
                       
                     <div className="col-md-5">
 
-                <h1 className="display-5 text-primary font-weight-bold">Offres d’emploi actives.</h1>
-                <p className="lead text-primary">Recruteurs actifs.</p>
+                <h1 className="display-5 text-info font-weight-bold ml-3 w-100">Offres d’emploi actives.</h1>
+                <p className="lead text-info ml-3">Recruteurs actifs.</p>
 
                 <form className="mt-4" method="POST" onSubmit={this.handleSubmit}>
           
