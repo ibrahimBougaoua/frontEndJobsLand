@@ -96,13 +96,14 @@ return (<div className="container">
 		</div>
 		<div className="col-md-9">
 			<div className="card-body">
-				<h5 className="card-title">{ this.props.match.params.company }</h5>
-      
-  {
+			<h5 className="card-title">{ this.props.match.params.company }</h5>
+
+{
   this.state.enable
-    ? <p className="card-text"><button type="submit" className="btn btn-sm btn-secondary disabled" onClick={delete_Abonnement}>s'abonner</button></p>
-    : <p className="card-text"><button type="submit" className="btn btn-sm btn-danger" onClick={new_Abonnement}>s'abonner</button></p>
+    ? <p className="card-text"><button type="submit" className="btn btn-sm btn-secondary disabled float-right position-relative" onClick={delete_Abonnement} style={{bottom:"40px"}}>s'abonner</button></p>
+    : <p className="card-text"><button type="submit" className="btn btn-sm btn-danger float-right position-relative" onClick={new_Abonnement} style={{bottom:"40px"}}>s'abonner</button></p>
   }  
+ 
   		</div>
 		</div>
 	</div>
