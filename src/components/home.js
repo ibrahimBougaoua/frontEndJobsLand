@@ -150,7 +150,7 @@ return (
         </div>
         </div>
 
-<div className="row mt-5">
+<div className="row mt-5 mb-3">
     <div className="col-md-12 bg-info">
             <div className="jumbotron jumbotron-fluid">
                 <div className="container">
@@ -164,24 +164,24 @@ return (
 
 
       <div className="container">
-        <div className="row justify-content-center">
+        <div className="row justify-content-center mt-5">
             <div className="col-md-6">
 
-              <h3 className="load float-left font-weight-bold">Recherches récentes</h3>
+              <h3 className="load float-left font-weight-bold text-info">Recherches récentes</h3>
               <button type="submit" className="btn btn-outline-info float-right">Effacer</button>
 
 <ul class="list-group float-left mt-3 w-100">
   <li class="list-group-item d-flex justify-content-between align-items-center">
     job exmple one
-    <span class="badge badge-primary badge-pill">14</span>
+    <span class="badge badge-info badge-pill">14</span>
   </li>
   <li class="list-group-item d-flex justify-content-between align-items-center">
     job exmple tow
-    <span class="badge badge-primary badge-pill">2</span>
+    <span class="badge badge-info badge-pill">2</span>
   </li>
   <li class="list-group-item d-flex justify-content-between align-items-center">
     job exmple three
-    <span class="badge badge-primary badge-pill">1</span>
+    <span class="badge badge-info badge-pill">1</span>
   </li>
 </ul>
 
