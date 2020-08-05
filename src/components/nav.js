@@ -17,12 +17,19 @@ return <div>
       <li className="nav-item">
         <a className="nav-link disabled" href="aa" tabindex="-1" aria-disabled="true">{props.nameOne}</a>
       </li>
+
+     { props.nameTow == "" ? null :
       <li className="nav-item">
         <a className="nav-link disabled" href="aa" tabindex="-1" aria-disabled="true">/</a>
       </li>
+      }
+
+     { props.nameTow == "" ? null :
       <li className="nav-item">
         <a className="nav-link disabled" href="aa" tabindex="-1" aria-disabled="true">{props.nameTow}</a>
       </li>
+      }
+
     </ul>
   </div>
 </nav>
