@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Post from "./post";
 import { Link } from "react-router-dom";
+import Nav from "./nav";
 
 import axios from 'axios';
 
@@ -70,6 +71,8 @@ render() {
 
 return (
     <div className="container mt-3">
+
+    <Nav nameOne="abonnements"></Nav>
 
     <div className="row">
     {companies}
