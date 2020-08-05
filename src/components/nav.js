@@ -15,7 +15,13 @@ return <div>
         <a className="nav-link disabled" href="aa" tabindex="-1" aria-disabled="true">/</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link disabled" href="aa" tabindex="-1" aria-disabled="true">{props.name}</a>
+        <a className="nav-link disabled" href="aa" tabindex="-1" aria-disabled="true">{props.nameOne}</a>
+      </li>
+      <li className="nav-item">
+        <a className="nav-link disabled" href="aa" tabindex="-1" aria-disabled="true">/</a>
+      </li>
+      <li className="nav-item">
+        <a className="nav-link disabled" href="aa" tabindex="-1" aria-disabled="true">{props.nameTow}</a>
       </li>
     </ul>
   </div>
