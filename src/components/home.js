@@ -150,7 +150,7 @@ return (
 
 
 
-    <div className="col-md-12 banner mt-0">
+    <div className="col-md-12 bg-info mt-0">
             <div className="jumbotron jumbotron-fluid">
                 <div className="container">
                 <h1 className="display-5 text-center text-white font-weight-bold">Publiez votre offre d’emploi et trouvez les personnes dont vous avez besoin.</h1>

@@ -22,7 +22,7 @@ function App() {
 
 
 <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
-  <Link className="navbar-brand text-primary" to={"/"}>Trouver un travail</Link>
+  <Link className="navbar-brand text-info" style={{padding: "0 0 0 5px",borderStyle: "solid",borderWidth: "0px 0px 0px 10px",borderRadius: "50px 0px 0px 50px"}} to={"/"}>Trouver un travail</Link>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>

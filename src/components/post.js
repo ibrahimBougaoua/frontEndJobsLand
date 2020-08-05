@@ -16,7 +16,7 @@ const listItems = (elements) => {
 }
 
 return <div className="col-md-12 mb-5">
-<h6 className="text-sm-left" style={{color: "#17a2b8",padding: "1.25rem",marginTop: "1.25rem",marginBottom: "1.25rem",border: "1px solid #17a2b8",borderLeftWidth: ".25rem",borderRadius: "0px",Color: "#5bc0de"}}>{props.name}</h6>
+<a className="navbar-brand text-sm-left text-info mb-3" style={{padding: "0px 0px 0px 8px",borderStyle: "solid",borderWidth: "0px 0px 1px 2px",borderRadius: "40px 0px 0px 40px"}} href={"#" + props.name}>{props.name}</a>
 <div className="card-deck mb-1">
     {listItems(props.elements.slice(0,5))}
 </div>
