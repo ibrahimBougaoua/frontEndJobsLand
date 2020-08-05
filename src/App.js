@@ -21,7 +21,7 @@ function App() {
     <div className="container-fluid m-0 p-0">
 
 
-<nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+<nav class="navbar navbar-expand-lg p-3 navbar-dark shadow-sm">
   <Link className="navbar-brand text-info" style={{padding: "0px 0px 0px 8px",borderStyle: "solid",borderWidth: "0px 0px 1px 2px",borderRadius: "40px 0px 0px 40px"}} to={"/"}>Trouver un travail</Link>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -55,7 +55,7 @@ function App() {
 
 { false ?
 <div className="mt-5 mb-5">
-      <form className="form-inline md-form form-sm mt-0 p-2 justify-content-center" method="POST" >
+      <form className="form-inline md-form form-sm mt-0 justify-content-center" method="POST" >
           <input className="form-control form-control-sm" name="search" type="text" placeholder="Search Job title,Company..." aria-label="Search" style={{width:"48vw"}}/>          
           <select name="cate" class="form-control form-control-sm ml-2">
             <option value="title">Job title</option>
