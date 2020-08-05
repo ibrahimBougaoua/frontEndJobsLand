@@ -107,29 +107,20 @@ const listSugg = sugg.map((element) =>
 return (
 <div className="container-fluid m-0 p-0">
 
-{ false ?
-    <div className="m-0 p-0">    
-        <div className="jumbotron jumbotron-fluid">
-            <div className="container">
-                <h1 className="display-4 text-center text-primary font-weight-bold mt-5">Offres d’emploi actives.</h1>
-                <p className="lead text-center text-primary">Recruteurs actifs.</p>
-                <div class="row">
-                    <div class="col-md-10 offset-md-2"><img src="https://38jr5u32lye82j9kce2xsl7a-wpengine.netdna-ssl.com/wp-content/uploads/2018/12/Footer-man.svg" className="w-75 h-75" alt=""/></div>
-                </div>
-            </div>
-        </div>
-    </div>
- : null }
- 
     <div className="row justify-content-center">
 
         <div className="col-md-12">    
             <div className="jumbotron jumbotron-fluid">
+              
                 <div className="container">
                   <div className="row">
                       
                     <div className="col-md-5">
-                    <form method="POST" onSubmit={this.handleSubmit}>
+
+                <h1 className="display-5 text-primary font-weight-bold">Offres d’emploi actives.</h1>
+                <p className="lead text-primary">Recruteurs actifs.</p>
+
+                <form className="mt-4" method="POST" onSubmit={this.handleSubmit}>
           
           <div className="form-group col-md-12">
               <input className="form-control form-control-lg" name="search" type="text" onChange={this.handleChangeValue} value={this.state.value} placeholder="Rechercher by skills,Majors,company" aria-label="Search" />          
