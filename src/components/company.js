@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from 'axios';
 import Post from "./post";
+import Nav from "./nav";
 
 // handle button click of login form
 async function ifAbonner(company) {
@@ -85,6 +86,8 @@ const tags = ['adventure','animation','children','comedy','fantasy','children','
     
 
 return (<div className="container">
+
+<Nav name="company"></Nav>
 
 <div className="card mb-5 border-0 rounded-0 shadow-sm bg-light">
 	<div className="row no-gutters">
