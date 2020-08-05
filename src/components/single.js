@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import Post from "./post";
+import Nav from "./nav";
 
 // handle button click of login form
 async function singleJob(id) {
@@ -100,23 +101,19 @@ const singleJob = this.state.job.map((element) =>
 	<div className="row no-gutters">
 
 	<div className="card-body">
-    <h5 className="card-title">{element[5]}</h5>
-    <h6 className="card-subtitle mb-2 text-muted">{element[1]}</h6>
-    <p className="card-text">Company : <Link to={'/company/' + element[2]} className="btn btn-sm btn-info"> {element[2]}</Link></p>
-    <p className="card-text">{element[3]}</p>
-    <p className="card-text">{element[4]}</p>
-    <p className="card-text">{element[6]}</p>
-    <p className="card-text">{element[7]}</p>
-    {element[8].split(',').map((element) => <button type="submit" className="btn btn-sm btn-info mr-2" >{element.replace(/'/g, "").replace("[", "").replace("]", "")}</button>)}
-    <p className="card-text">{element[9]}</p>
-
   {
   this.state.enable
-    ? <p className="card-text"><button type="submit" className="btn btn-sm btn-secondary disabled float-right position-relative" onClick={delete_show_late} style={{ bottom: "9vw" }}>already saved</button></p>
-    : <p className="card-text"><button type="submit" className="btn btn-sm btn-danger float-right position-relative" onClick={new_show_later} style={{ bottom: "9vw" }}>interesse</button></p>
+    ? <p className="card-text"><button type="submit" className="btn btn-sm btn-secondary disabled float-right position-relative" onClick={delete_show_late}>Already saved</button></p>
+    : <p className="card-text"><button type="submit" className="btn btn-sm btn-danger float-right position-relative" onClick={new_show_later}>Intéressé</button></p>
   }
-	<small className="text-muted">{element[6]}</small><br />
-	<small className="text-muted">{element[11]}</small><br />
+    <h5 className="card-title mb-4">Title : {element[5]}</h5>
+    <h6 className="card-subtitle mb-2 text-muted mb-4">published : {element[1]}</h6>
+    <p className="card-subtitle text-muted mb-4">Company : <Link to={'/company/' + element[2]} className="btn btn-sm btn-outline-info"> {element[2]}</Link></p>
+    <p className="card-subtitle text-muted mb-4">Eligibility : {element[4]}</p>
+    <p className="card-subtitle text-muted mb-4">Job Description : {element[6]}</p>
+    <p className="card-subtitle text-muted mb-4">Skills : {element[8].split(',').map((element) => <button type="submit" className="btn btn-sm btn-outline-info mr-2" >{element.replace(/'/g, "").replace("[", "").replace("]", "")}</button>)}</p>
+    <p className="card-subtitle text-muted">Location : {element[9]}</p>
+ 
   <button type="button" className="btn btn-sm btn-info mr-2 mt-2 mb-2 float-right position-relative" data-toggle="modal" data-target="#exampleModal" style={{ top: "0vw",left: "1vw" }}>More details</button>
 	</div>
 	</div>
@@ -135,8 +132,15 @@ const singleJob = this.state.job.map((element) =>
 	<div className="row no-gutters">
 	<div className="col-md-12">
 	<div className="card-body">
-	<h5 className="card-title">{element[3]}</h5>
-	<small className="text-muted"><b>Title : </b>{element[5]}</small><br />
+    <h5 className="card-title">Title : {element[5]}</h5>
+    <h6 className="card-subtitle mb-2 text-muted">published : {element[1]}</h6>
+    <p className="card-text">Company : <Link to={'/company/' + element[2]} className="btn btn-sm btn-info"> {element[2]}</Link></p>
+    <p className="card-text">Required Qual : {element[3]}</p>
+    <p className="card-text">Eligibility : {element[4]}</p>
+    <p className="card-text">Job Description : {element[6]}</p>
+    <p className="card-text">Job Requirment : {element[7]}</p>
+    Skills : {element[8].split(',').map((element) => <button type="submit" className="btn btn-sm btn-info mr-2" >{element.replace(/'/g, "").replace("[", "").replace("]", "")}</button>)}<br />
+    <p className="card-text">Location : {element[9]}</p>
 	</div>
 	</div>
 	</div>
@@ -153,10 +157,11 @@ const singleJob = this.state.job.map((element) =>
 );
 
 return (
-<div className="container">    
+<div className="container">   
+
+<Nav name="single job"></Nav>
 
 {singleJob}
-
 
 <Post name="Related Jobs" link="single/" elements={this.state.related}></Post>
 

@@ -9,7 +9,7 @@ const listItems = (elements) => {
     <h5 className="card-title">{element[1]}</h5>
     <h6 className="card-subtitle mb-2 text-muted">{element[1]}</h6>
     <p className="card-text">{element[1]}</p>
-    <Link to={props.link + element[10]} className="btn btn-sm btn-info">Read more</Link>
+    <Link to={props.link + element[10]} className="btn btn-sm btn-outline-info">Read more</Link>
   </div>
 </div>
 ));
