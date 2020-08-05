@@ -87,7 +87,7 @@ const tags = ['adventure','animation','children','comedy','fantasy','children','
 
 return (<div className="container">
 
-<Nav name="company"></Nav>
+<Nav nameOne="company" nameTow={this.props.match.params.company}></Nav>
 
 <div className="card mb-5 border-0 rounded-0 shadow-sm bg-light">
 	<div className="row no-gutters">
