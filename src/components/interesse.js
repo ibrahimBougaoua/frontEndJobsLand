@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import Nav from "./nav";
 
 import axios from 'axios';
 
@@ -47,11 +48,12 @@ const listOfJobs = this.state.jobs.map((element) =>
 );
 
 return (
-    <div>
 
     <div className="container">
 
-    <p className="lead text-sm-left">interesse</p>
+    <Nav nameOne="Intéressé"></Nav>
+
+    <p className="lead text-sm-left">Intéressé</p>
 
     <div className="row">
     {listOfJobs}
@@ -59,7 +61,6 @@ return (
 
     </div>
 
-    </div>
 );
 }
 }
