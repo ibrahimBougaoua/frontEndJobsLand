@@ -1,6 +1,7 @@
 body {
   /*background-color: #5f63bd;*/
 }
+
 .home-header {
   background-image: url(https://images.pexels.com/photos/273238/pexels-photo-273238.jpeg?cs=srgb&dl=blur-bottle-bright-building-273238.jpg&fm=jpg);
   width: 100%;
@@ -11,10 +12,10 @@ body {
   border-radius: 0;
   background-position: bottom;
   }
-.banner {
-  background-color: #5f63bd;
-  /*background-color: #f5a339;*/
-}
+  .banner {
+    background-color: #5f63bd;
+    /*background-color: #f5a339;*/
+  }
 .banner2 {
   background-color: #87cef5;
 }

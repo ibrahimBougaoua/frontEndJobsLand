@@ -199,10 +199,11 @@ return (
         </div>
 
 
+        <div className="container">    
         <Post name="Recommended by Majors" link="single/" elements={this.state.majors}></Post>
         <Post name="Recommended by Skills" link="single/" elements={this.state.skills}></Post>
         <Post name="Recommended by City" link="single/" elements={this.state.city}></Post>
-
+        </div>
 
         <div className="col-md-12 banner">    
             <div className="jumbotron jumbotron-fluid">
