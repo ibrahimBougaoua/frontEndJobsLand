@@ -192,13 +192,53 @@ return (
         </div>
 
 
+
+      <div className="container">
+        <div className="row justify-content-center">
+            <div className="col-md-6">
+
+              <h3 className="load float-left font-weight-bold">Recherches récentes</h3>
+              <button type="submit" className="btn btn-outline-info float-right">Effacer</button>
+
+<ul class="list-group float-left mt-3 w-100">
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    job exmple one
+    <span class="badge badge-primary badge-pill">14</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    job exmple tow
+    <span class="badge badge-primary badge-pill">2</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    job exmple three
+    <span class="badge badge-primary badge-pill">1</span>
+  </li>
+</ul>
+
+            </div>
+            <div className="col-md-6">
+              <img src="undraw_reading_list_4boi.svg" className="w-100 h-50 mt-2 rounded" alt=""/>
+            </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
         <div className="container">    
         <Post name="Recommended by Majors" link="single/" elements={this.state.majors}></Post>
         <Post name="Recommended by Skills" link="single/" elements={this.state.skills}></Post>
         <Post name="Recommended by City" link="single/" elements={this.state.city}></Post>
         </div>
 
-        <div className="col-md-12 banner">    
+        <div className="col-md-12 bg-info">    
             <div className="jumbotron jumbotron-fluid">
                 <div className="container">
                     <h1 className="display-4 text-center text-white font-weight-bold">Trouvez des postes ou des stages à pourvoir</h1>
