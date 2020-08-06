@@ -84,22 +84,24 @@ function App() {
     </Router>
     
     
-<footer className="font-small unique-color-dark mt-5 bg-info">
+<footer className="mt-5 bg-info">
 
+<div className="shadow-sm  pt-5 pb-5">
+<div className="container">
 <div className="col-md-12">
  <div className="row">
-  <div className="col-md-3 p-4"> 
+  <div className="col-md-4 p-4"> 
     <p className="text-sm-left text-white">About us</p>
-    <p className="text-sm-left text-white">Harry Potter's life is miserable. His parents are dead and he's stuck with his heartless relatives, who force him to live in a tiny closet under the stairs. But his fortune changes.</p>
+    <p className="text-sm-left text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
   </div>
-  <div className="col-md-3 p-4"> 
-    <p className="text-sm-left text-white">Jobs</p>
+  <div className="col-md-4 p-4"> 
+    <p className="text-sm-left text-white">Find a job</p>
     <img src="undraw_job_offers_kw5d.svg" className="w-100 h-100 rounded" alt=""/>
   </div>
-  <div className="col-md-6 p-4"> 
+  <div className="col-md-4 p-4"> 
       <div className="jumbotron jumbotron-fluid p-0">
           <div className="container">
-              <h1 className="display-4 text-center text-white font-weight-bold">Offres d’emploi actives.</h1>
+              <h1 className="display-5 text-center text-white font-weight-bold w-100">Offres d’emploi actives.</h1>
               <p className="lead text-center text-white">Recruteurs actifs.</p>
               <img src="play-button.svg" className="mt-2 rounded position-relative" alt="" style={{width: "5vw",height: "100%",left: "20vw"}}/>
           </div>
@@ -107,8 +109,11 @@ function App() {
   </div>
  </div>
 </div>
+</div>
 
-<div className="footer-copyright text-center text-white py-3" id="mainNav">© 2020 Copyright:
+</div>
+
+<div className="footer-copyright text-center text-white py-4" id="mainNav">© 2020 Copyright:
   <a href="https://datalake.com/" className="text-white"> datalake.com</a>
 </div>
 
