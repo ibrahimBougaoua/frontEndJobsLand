@@ -113,7 +113,7 @@ function App() {
 
 </div>
 
-<div className="footer-copyright text-center text-white py-4" id="mainNav">© 2020 Copyright:
+<div className="footer-copyright text-center text-white py-3" id="mainNav">© 2020 Copyright :
   <a href="https://datalake.com/" className="text-white"> datalake.com</a>
 </div>
 
