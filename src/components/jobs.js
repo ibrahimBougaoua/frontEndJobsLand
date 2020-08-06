@@ -19,8 +19,7 @@ export default class Jobs extends Component {
 state = { titlesByCompany: [] }
 
 componentDidMount = ()=> {
-
-    getJobsComapnyAndATitle('ddddddd',this.props.match.params.title).then(response => {
+    getJobsComapnyAndATitle('Boomerang Software LLC',this.props.match.params.title).then(response => {
         this.setState({
             titlesByCompany: response.data
         });
