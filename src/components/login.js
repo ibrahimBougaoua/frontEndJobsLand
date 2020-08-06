@@ -54,13 +54,13 @@ const handleLogin = () => {
 //}
 
 return (
-<div className="container mt-5">
-    <div className="row">
-    <div className="col-md-5 mt-5">
+    <div className="container-fluid">
+        <div className="row p-5">
+            <div className="col-md-5">
 
 { this.state.errorMessage && <div class="alert alert-danger" role="alert">{ this.state.errorMessage }</div> }
             <div className="card border-0 shadow">
-                <div className="card-header border-0 bg-primary text-light">Login</div>
+                <div className="card-header border-0 bg-info text-light">Login</div>
 
                 <div className="card-body">
                     <form method="POST" onSubmit={this.handleSubmit}>
@@ -86,19 +86,22 @@ return (
 {
   this.state.loading
   ? <button class="btn btn-primary" type="button" disabled><span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...</button>
-  : <button type="submit" className="btn btn-primary" onClick={handleLogin}>login</button>
+  : <button type="submit" className="btn btn-outline-info" onClick={handleLogin}>login</button>
 }
                             </div>
                         </div>
 
                     </form>
+
+                    <img src="/undraw_Profile_data_re_v81r.svg" className="w-75 h-75 mt-2 rounded" alt=""/>
+
                 </div>
             </div>
         </div>
 
-    <div className="col-md-7 mt-5">
-        <img src="https://38jr5u32lye82j9kce2xsl7a-wpengine.netdna-ssl.com/wp-content/uploads/2018/12/Footer-man.svg" className="w-100 mt-2 rounded" alt=""/>
-    </div>
+        <div className="col-md-7">
+            <img src="/undraw_Profile_data_re_v81r.svg" className="w-100 mt-2 rounded" alt=""/>
+        </div>
 
     </div>
 
