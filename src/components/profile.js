@@ -16,7 +16,7 @@ export default class Profile extends Component {
     
     constructor(props) {
         super(props);
-        this.state = {data: [],fisrtname: '',lastname: '',email: '',password: '',sexe: 'male',age: 15,country: 'NC',telephone: '',errorMessage: '',selectedM: [],selectedS: []};
+        this.state = {data: [],fisrtname: '',lastname: '',email: '',password: '',sexe: 'male',age: 15,city: 'NC',telephone: '',errorMessage: '',selectedM: [],selectedS: []};
         
         this.handleChangeFisrtname = this.handleChangeFisrtname.bind(this);
         this.handleChangeLastname = this.handleChangeLastname.bind(this);
@@ -24,7 +24,7 @@ export default class Profile extends Component {
         this.handleChangePassword = this.handleChangePassword.bind(this);
         this.handleChangeSexe = this.handleChangeSexe.bind(this);
         this.handleChangeAge = this.handleChangeAge.bind(this);
-        this.handleChangeCountry = this.handleChangeCountry.bind(this);
+        this.handleChangeCity = this.handleChangeCity.bind(this);
         this.handleChangeTelephone = this.handleChangeTelephone.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
       }
@@ -53,8 +53,8 @@ export default class Profile extends Component {
         this.setState({age: event.target.options[event.target.selectedIndex].value});
       }
 
-      handleChangeCountry(event) {
-        this.setState({country: event.target.options[event.target.selectedIndex].value});
+      handleChangeCity(event) {
+        this.setState({city: event.target.options[event.target.selectedIndex].value});
       }
 
       handleChangeTelephone(event) {
@@ -151,8 +151,8 @@ return (
                         </div>
 
                         <div className="form-group  col-md-6">
-                            <label for="name">Country</label>
-                            <select name="country" class="form-control" value={this.state.country} onChange={this.handleChangeCountry}>
+                            <label for="name">City</label>
+                            <select name="country" class="form-control" value={this.state.city} onChange={this.handleChangeCity}>
                                 {listCountry}
                             </select>
                         </div>
