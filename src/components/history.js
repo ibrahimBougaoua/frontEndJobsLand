@@ -5,7 +5,7 @@ import axios from 'axios';
 // handle button click of login form
 async function viewsJobs() {
     try {
-      const response = await axios.get('http://127.0.0.1:5000/movie/history/views/email/' + localStorage.getItem('email'));
+      const response = await axios.get('http://127.0.0.1:5002/job/history/views/email/' + localStorage.getItem('email'));
       console.log(response);
       return response;
     } catch (error) {
@@ -13,15 +13,14 @@ async function viewsJobs() {
     }
 }
 
-
 export default class History extends Component {
 
-state = { value: 2,jobsViews: []};
+state = { jobsViews: []};
 
 componentDidMount =()=>{
 	viewsJobs().then(response => {
 	  this.setState({
-      jobsViews: [['job one','description one','https://images.pexels.com/photos/3815585/pexels-photo-3815585.jpeg?cs=srgb&dl=person-writing-on-white-paper-3815585.jpg&fm=jpg'],['job tow','description tow','https://images.pexels.com/photos/3815585/pexels-photo-3815585.jpeg?cs=srgb&dl=person-writing-on-white-paper-3815585.jpg&fm=jpg'],['job three','description three','https://images.pexels.com/photos/3815585/pexels-photo-3815585.jpeg?cs=srgb&dl=person-writing-on-white-paper-3815585.jpg&fm=jpg'],['job four','description four','https://images.pexels.com/photos/3815585/pexels-photo-3815585.jpeg?cs=srgb&dl=person-writing-on-white-paper-3815585.jpg&fm=jpg'],['job five','description five','https://images.pexels.com/photos/3815585/pexels-photo-3815585.jpeg?cs=srgb&dl=person-writing-on-white-paper-3815585.jpg&fm=jpg']]
+      jobsViews: response.data
 	  });
 	});
 }

@@ -100,7 +100,7 @@ const delete_Abonnement = () => {
 }
 
 const jobsTitltes = this.state.titles.map((element) => 
-<Link className="btn btn-sm btn-outline-info m-1" to={"/jobs/" + element} >{element}</Link>
+<Link className="btn btn-sm btn-outline-info m-1" to={"/jobs/" + this.props.match.params.company + '/' + element} >{element}</Link>
 );
 
 return (<div className="container">

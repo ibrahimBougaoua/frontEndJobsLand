@@ -77,7 +77,7 @@ function App() {
         <Route path="/abonnements" exact component={Abonnements} />
         <Route path="/company/:company" exact component={Company} />
         <Route path="/single/:id" exact component={Single} />
-        <Route path="/jobs/:title" exact component={Jobs} />
+        <Route path="/jobs/:company/:title" exact component={Jobs} />
       </Switch>
           
     </div>
