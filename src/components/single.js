@@ -54,9 +54,6 @@ state = { enable: false,name: '',job: [],related: [] };
           this.setState({
             job: response.data
           });
-          this.setState({
-            name: response.data[5]
-          });
         });
         relatedJob(this.props.match.params.id).then(response => {
           this.setState({
@@ -162,7 +159,7 @@ const singleJob = this.state.job.map((element) =>
 return (
 <div className="container">   
 
-<Nav nameOne="single job" nameTow={this.state.name}></Nav>
+<Nav nameOne="single job"></Nav>
 
 {singleJob}
 
