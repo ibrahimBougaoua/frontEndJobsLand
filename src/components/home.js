@@ -6,7 +6,7 @@ import Post from "./post";
 // handle button click of login form
 async function recommendedMajors() {
   try {
-    const response = await axios.get('http://127.0.0.1:5002/job/recommended/majors/Java Developer');
+    const response = await axios.get('http://127.0.0.1:5002/job/recommended/majors/' + localStorage.getItem("email"));
     console.log(response);
     return response;
   } catch (error) {
@@ -17,7 +17,7 @@ async function recommendedMajors() {
 // handle button click of login form
 async function recommendedSkills() {
   try {
-    const response = await axios.get('http://127.0.0.1:5002/job/recommended/skills/R');
+    const response = await axios.get('http://127.0.0.1:5002/job/recommended/skills/' + localStorage.getItem("email"));
     console.log(response);
     return response;
   } catch (error) {
