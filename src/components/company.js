@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from 'axios';
 import Post from "./post";
 import Nav from "./nav";
+import { Link } from "react-router-dom";
 
 // handle button click of login form
 async function ifAbonner(company) {
@@ -99,7 +100,7 @@ const delete_Abonnement = () => {
 }
 
 const jobsTitltes = this.state.titles.map((element) => 
-<button className="btn btn-sm btn-outline-info m-1">{element}</button>
+<Link className="btn btn-sm btn-outline-info m-1" to={"/jobs/" + element} >{element}</Link>
 );
 
 return (<div className="container">

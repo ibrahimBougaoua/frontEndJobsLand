@@ -12,6 +12,7 @@ import History from "./components/history";
 import Abonnements from "./components/abonnements";
 import Company from "./components/company";
 import Single from "./components/single";
+import Jobs from "./components/jobs";
 
 function App() {
  
@@ -76,6 +77,7 @@ function App() {
         <Route path="/abonnements" exact component={Abonnements} />
         <Route path="/company/:company" exact component={Company} />
         <Route path="/single/:id" exact component={Single} />
+        <Route path="/jobs/:title" exact component={Jobs} />
       </Switch>
           
     </div>
