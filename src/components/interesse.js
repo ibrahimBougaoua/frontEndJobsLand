@@ -50,7 +50,19 @@ return (
 
     <Nav nameOne="Intéressé"></Nav>
 
-    <p className="lead text-sm-left">Intéressé</p>
+
+<div className="card mb-4 mt-4 border-0 rounded-0 shadow-sm bg-light">
+	<div className="row no-gutters">
+		<div className="col-md-2">
+			<img src="/undraw_Popular_re_mlfe.svg" class="w-100 h-100 mt-2 rounded p-3" alt="..." />
+		</div>
+		<div className="col-md-10">
+			<div className="card-body">
+			<h5 className="card-title">History : </h5>
+  		</div>
+		</div>
+	</div>
+</div>
 
     <div className="row">
     {listOfJobs}
