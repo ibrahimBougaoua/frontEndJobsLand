@@ -84,12 +84,12 @@ export default class Profile extends Component {
 
 // handle button click of login form
 const handleUpdateUserInformation = () => {
-  axios.get('http://localhost:5000/movie/user/update/' + localStorage.getItem('email'), {params : {fisrtname : this.state.fisrtname,lastname : this.state.lastname,email : this.state.email,password : this.state.password,sex : this.state.sex,age : this.state.age,country : this.state.country,telephone : this.state.telephone}})
+  axios.get('http://localhost:5002/job/user/update/' + localStorage.getItem('email'), {params : {fisrtname : this.state.fisrtname,lastname : this.state.lastname,email : this.state.email,password : this.state.password,sexe : this.state.sexe,age : this.state.age,city : this.state.city,telephone : this.state.telephone}})
   .then(function (response) {
     // setter
     //localStorage.setItem('token', response.data.token)
     //localStorage.setItem('email', response.data.email)
-    //console.log(response.data)
+    console.log(response.data)
     //window.location.replace("/panel/profile")
     //this.props.history.push('/panel')
   }).catch(function (error) {
