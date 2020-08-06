@@ -39,7 +39,7 @@ async function ifShowLater(id) {
 
 export default class Single extends Component {
 
-state = { enable: false,job: [],related: [] };
+state = { enable: false,name: '',job: [],related: [] };
     
       componentDidMount =()=>{
         ifShowLater(this.props.match.params.id).then(response => {
@@ -53,6 +53,9 @@ state = { enable: false,job: [],related: [] };
         singleJob(this.props.match.params.id).then(response => {
           this.setState({
             job: response.data
+          });
+          this.setState({
+            name: response.data[5]
           });
         });
         relatedJob(this.props.match.params.id).then(response => {
@@ -159,7 +162,7 @@ const singleJob = this.state.job.map((element) =>
 return (
 <div className="container">   
 
-<Nav name="single job"></Nav>
+<Nav nameOne="single job" nameTow={this.state.name}></Nav>
 
 {singleJob}
 

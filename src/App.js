@@ -82,7 +82,7 @@ function App() {
     </Router>
     
     
-<footer className="font-small unique-color-dark mt-5" style={{backgroundColor: "#5f63bd"}}>
+<footer className="font-small unique-color-dark mt-5 bg-info">
 
 <div className="col-md-12">
  <div className="row">
