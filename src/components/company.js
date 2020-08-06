@@ -25,6 +25,28 @@ async function jobsByCompany(company) {
     }
 }
 
+// handle button click of login form
+async function getJobTitlesComany(company) {
+    try {
+      const response = await axios.get('http://127.0.0.1:5002/job/company/titles/' + company);
+      console.log(response);
+      return response;
+    } catch (error) {
+      console.error(error);
+    }
+}
+
+// handle button click of login form
+async function getJobsComapnyAndATitle(company,title) {
+    try {
+      const response = await axios.get('http://127.0.0.1:5002/job/company/company/' + company + '/title/' + title);
+      console.log(response);
+      return response;
+    } catch (error) {
+      console.error(error);
+    }
+}
+
 export default class Company extends Component {
 
 state = { checked: false,enable: false,jobs: [] }
