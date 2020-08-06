@@ -5,7 +5,7 @@ import MultiSelect from "@khanacademy/react-multi-select";
 // handle button click of login form
 async function getUserInformation() {
   try {
-    const response = await axios.get('http://127.0.0.1:5000/movie/user/information/' + localStorage.getItem('email'));
+    const response = await axios.get('http://127.0.0.1:5002/job/user/information/' + localStorage.getItem('email'));
     console.log(response);
     return response;
   } catch (error) {
@@ -201,7 +201,7 @@ export default class Profile extends Component {
     
     constructor(props) {
         super(props);
-        this.state = {fisrtname: '',lastname: '',email: '',password: '',sexe: 'male',age: 15,country: 'NC',telephone: '',errorMessage: '',selectedM: [],selectedS: []};
+        this.state = {data: [],fisrtname: '',lastname: '',email: '',password: '',sexe: 'male',age: 15,country: 'NC',telephone: '',errorMessage: '',selectedM: [],selectedS: []};
         
         this.handleChangeFisrtname = this.handleChangeFisrtname.bind(this);
         this.handleChangeLastname = this.handleChangeLastname.bind(this);
@@ -249,6 +249,15 @@ export default class Profile extends Component {
       handleSubmit(event) {
         event.preventDefault();
       }
+      
+      componentDidMount =()=>{
+        getUserInformation().then(response => {
+              this.setState({
+                data: response.data
+              });
+          });
+        }
+
 
     render() {
 
