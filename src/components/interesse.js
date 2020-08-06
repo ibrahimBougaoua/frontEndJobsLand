@@ -54,9 +54,9 @@ return (
 
     <div className="row">
     <div className="col-md-3">
-<div className="card border-0 mr-2 shadow-sm mb-3 bg-white rounded">
+<div className="card border-0 mr-2 shadow-sm mb-3 bg-white justify-content-center rounded">
   <div className="card-body">
-    <h5 className="card-title">Intéressé !!! </h5>
+    <h5 className="card-title text-center">Intéressé !!! </h5>
     <img src="/undraw_public_discussion_btnw.svg" class="w-100 h-100 mt-2 rounded p-3" alt="..." />
   </div>
 </div>
