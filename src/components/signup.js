@@ -349,7 +349,7 @@ return (
                 </div>
             </div>
         </div>
-
+        
         <div className="col-md-6">
             <img src="/undraw_sign_in_e6hj.svg" className="w-100 mt-2 rounded" alt=""/>
         </div>
