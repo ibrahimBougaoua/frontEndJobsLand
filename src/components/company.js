@@ -99,7 +99,10 @@ const delete_Abonnement = () => {
 }
 
 const tags = ['adventure','animation','children','comedy','fantasy','children','fantasy','romance','drama','action','crime','thriller','horror','mystery','sci-Fi','documentary','imax'];
-    
+
+const jobsTitltes = this.state.titles.map((element) => 
+<button className="btn btn-sm btn-outline-info m-1">{element}</button>
+);
 
 return (<div className="container">
 
@@ -113,13 +116,15 @@ return (<div className="container">
 		<div className="col-md-9">
 			<div className="card-body">
 			<h5 className="card-title">{ this.props.match.params.company }</h5>
-
+            
 {
   this.state.enable
     ? <p className="card-text"><button type="submit" className="btn btn-sm btn-secondary disabled float-right position-relative" onClick={delete_Abonnement} style={{bottom:"40px"}}>s'abonner</button></p>
     : <p className="card-text"><button type="submit" className="btn btn-sm btn-danger float-right position-relative" onClick={new_Abonnement} style={{bottom:"40px"}}>s'abonner</button></p>
-  }  
- 
+  }    
+
+<p className="card-subtitle text-muted mb-4">Jobs : {jobsTitltes}</p>
+
   		</div>
 		</div>
 	</div>
