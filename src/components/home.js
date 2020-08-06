@@ -139,7 +139,7 @@ return (
     
           </form>
 
-          <img src="undraw_people_search_wctu.svg" className="w-50 h-50 mt-2 rounded" alt=""/>
+          <img src="undraw_people_search_wctu.svg" className="w-50 h-50 mt-2 rounded position-relative float-left ml-2" style={{bottom: "1.5em"}} alt=""/>
 
                     </div>
                     <div className="col-md-7">
