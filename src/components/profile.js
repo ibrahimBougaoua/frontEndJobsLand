@@ -16,7 +16,7 @@ export default class Profile extends Component {
     
     constructor(props) {
         super(props);
-        this.state = {data: [],fisrtname: '',lastname: '',email: '',password: '',sexe: 'male',age: 15,city: 'NC',telephone: '',errorMessage: '',selectedM: [],selectedS: []};
+        this.state = {data: [],fisrtname: '',lastname: '',email: '',password: '',sexe: 'male',age: 15,city: 'NC',telephone: '',errorMessage: ''};
         
         this.handleChangeFisrtname = this.handleChangeFisrtname.bind(this);
         this.handleChangeLastname = this.handleChangeLastname.bind(this);
@@ -70,9 +70,15 @@ export default class Profile extends Component {
               this.setState({
                 data: response.data
               });
+              this.setState({fisrtname: this.state.data[0]});
+              this.setState({lastname: this.state.data[1]});
+              this.setState({email: this.state.data[2]});
+              this.setState({sexe: this.state.data[3]});
+              this.setState({age: this.state.data[4]});
+              this.setState({city: this.state.data[5]});
+              this.setState({telephone: this.state.data[6]});
           });
         }
-
 
     render() {
 
@@ -107,7 +113,7 @@ const listAge = ages.map((element) =>
 
 return (
 <div className="container-fluid">
-    <div className="row p-4">
+    <div className="row p-5">
         <div className="col-md-6">
             <div className="card border-0 shadow">
 
