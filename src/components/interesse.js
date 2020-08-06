@@ -51,20 +51,16 @@ return (
     <Nav nameOne="Intéressé"></Nav>
 
 
-<div className="card mb-4 mt-4 border-0 rounded-0 shadow-sm bg-light">
-	<div className="row no-gutters">
-		<div className="col-md-2">
-			<img src="/undraw_Popular_re_mlfe.svg" class="w-100 h-100 mt-2 rounded p-3" alt="..." />
-		</div>
-		<div className="col-md-10">
-			<div className="card-body">
-			<h5 className="card-title">History : </h5>
-  		</div>
-		</div>
-	</div>
-</div>
 
     <div className="row">
+    <div className="col-md-3">
+<div className="card border-0 mr-2 shadow-sm mb-3 bg-white rounded">
+  <div className="card-body">
+    <h5 className="card-title">Intéressé !!! </h5>
+    <img src="/undraw_public_discussion_btnw.svg" class="w-100 h-100 mt-2 rounded p-3" alt="..." />
+  </div>
+</div>
+</div>
     {listOfJobs}
     </div>
 
