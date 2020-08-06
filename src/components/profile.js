@@ -108,7 +108,7 @@ const listAge = ages.map((element) =>
 return (
 <div className="container-fluid">
     <div className="row p-4">
-        <div className="col-md-8">
+        <div className="col-md-6">
             <div className="card border-0 shadow">
 
               { this.state.errorMessage && <div class="alert alert-danger" role="alert">{ this.state.errorMessage }</div> }
@@ -171,7 +171,7 @@ return (
             </div>
         </div>
 
-        <div className="col-md-4 mt-5">
+        <div className="col-md-6 mt-5">
             <img src="/undraw_Profile_data_re_v81r.svg" className="w-100 mt-2 rounded" alt=""/>
         </div>
 
