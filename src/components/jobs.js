@@ -36,7 +36,7 @@ return (<div className="container">
 <div className="card mb-4 mt-4 border-0 rounded-0 shadow-sm bg-light">
 	<div className="row no-gutters">
 		<div className="col-md-2">
-			<img src="/undraw_business_decisions_gjwy.svg" class="w-75 h-75 mt-2 rounded p-3" alt="..." />
+			<img src="/undraw_detailed_analysis_xn7y.svg" class="w-100 h-100 mt-2 rounded p-3" alt="..." />
 		</div>
 		<div className="col-md-10">
 			<div className="card-body">
