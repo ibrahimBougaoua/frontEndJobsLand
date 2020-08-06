@@ -36,20 +36,9 @@ async function getJobTitlesComany(company) {
     }
 }
 
-// handle button click of login form
-async function getJobsComapnyAndATitle(company,title) {
-    try {
-      const response = await axios.get('http://127.0.0.1:5002/job/company/company/' + company + '/title/' + title);
-      console.log(response);
-      return response;
-    } catch (error) {
-      console.error(error);
-    }
-}
-
 export default class Company extends Component {
 
-state = { checked: false,enable: false,jobs: [] }
+state = { checked: false,enable: false,jobs: [] ,titles: [] }
 
 
 componentDidMount =()=>{
@@ -61,12 +50,17 @@ if(response.data === 'yes'){
   });
 }
   });
-  jobsByCompany(this.props.match.params.company).then(response => {
+    jobsByCompany(this.props.match.params.company).then(response => {
 	  this.setState({
 		jobs: response.data
 	  });
 	  console.log('company : ' + this.props.match.params.company)
 	});
+    getJobTitlesComany(this.props.match.params.company).then(response => {
+        this.setState({
+            titles: response.data
+        });
+    });
   }
 
 
