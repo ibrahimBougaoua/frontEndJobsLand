@@ -285,14 +285,14 @@ const listAge = ages.map((element) =>
 
 
 return (
-<div className="container-fluid mt-2 mb-5 mt-5">
-    <div className="row justify-content-center position-relative">
+<div className="container-fluid">
+    <div className="row p-4">
         <div className="col-md-8">
             <div className="card border-0 shadow">
 
               { this.state.errorMessage && <div class="alert alert-danger" role="alert">{ this.state.errorMessage }</div> }
 
-                <div className="card-header border-0 bg-info text-light">Register</div>
+                <div className="card-header border-0 bg-info text-light">update profile info</div>
 
                 <div className="card-body">
                     <form method="POST" onSubmit={this.handleSubmit}>
