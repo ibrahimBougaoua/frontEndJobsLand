@@ -218,69 +218,6 @@ return (
             </div>
         </div>
 
-        <div className="col-md-12">    
-            <div className="jumbotron jumbotron-fluid">
-                <div className="container">
-                    
-<div class="card-deck">
-  <div className="card">
-    <img src="https://images.pexels.com/photos/3815585/pexels-photo-3815585.jpeg?cs=srgb&dl=person-writing-on-white-paper-3815585.jpg&fm=jpg" className="card-img-top" alt="..." />
-    <div className="card-body">
-      <h6 className="card-title">Web, Mobile & Software Dev</h6>
-    </div>
-  </div>
-  <div className="card">
-    <img src="https://images.pexels.com/photos/3815585/pexels-photo-3815585.jpeg?cs=srgb&dl=person-writing-on-white-paper-3815585.jpg&fm=jpg" className="card-img-top" alt="..." />
-    <div className="card-body">
-      <h6 className="card-title">Design & Creative</h6>
-    </div>
-  </div>
-  <div className="card">
-    <img src="https://images.pexels.com/photos/3815585/pexels-photo-3815585.jpeg?cs=srgb&dl=person-writing-on-white-paper-3815585.jpg&fm=jpg" className="card-img-top" alt="..." />
-    <div className="card-body">
-      <h6 className="card-title">Writing</h6>
-    </div>
-  </div>
-  <div className="card">
-    <img src="https://images.pexels.com/photos/3815585/pexels-photo-3815585.jpeg?cs=srgb&dl=person-writing-on-white-paper-3815585.jpg&fm=jpg" className="card-img-top" alt="..." />
-    <div className="card-body">
-      <h6 className="card-title">Sales & Marketing</h6>
-    </div>
-  </div>
-</div>
-
-<div class="card-deck mt-4">
-  <div className="card">
-    <img src="https://images.pexels.com/photos/3815585/pexels-photo-3815585.jpeg?cs=srgb&dl=person-writing-on-white-paper-3815585.jpg&fm=jpg" className="card-img-top" alt="..." />
-    <div className="card-body">
-      <h6 className="card-title">Admin Support</h6>
-    </div>
-  </div>
-  <div className="card">
-    <img src="https://images.pexels.com/photos/3815585/pexels-photo-3815585.jpeg?cs=srgb&dl=person-writing-on-white-paper-3815585.jpg&fm=jpg" className="card-img-top" alt="..." />
-    <div className="card-body">
-      <h6 className="card-title">Customer Service</h6>
-    </div>
-  </div>
-  <div className="card">
-    <img src="https://images.pexels.com/photos/3815585/pexels-photo-3815585.jpeg?cs=srgb&dl=person-writing-on-white-paper-3815585.jpg&fm=jpg" className="card-img-top" alt="..." />
-    <div className="card-body">
-      <h6 className="card-title">Data Science & Analytics</h6>
-    </div>
-  </div>
-  <div className="card">
-    <img src="https://images.pexels.com/photos/3815585/pexels-photo-3815585.jpeg?cs=srgb&dl=person-writing-on-white-paper-3815585.jpg&fm=jpg" className="card-img-top" alt="..." />
-    <div className="card-body">
-      <h6 className="card-title">Engineering & Architecture</h6>
-    </div>
-  </div>
-</div>
-
-</div>
-
-            </div>
-        </div>
-
 
 
         <div className="col-md-12">    
