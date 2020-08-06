@@ -31,14 +31,11 @@ const historyViews = this.state.jobsViews.map((element) =>
 <div className="col-md-12">
 <div className="card mb-5 border-0 rounded-0 shadow-sm bg-light">
 <div className="row no-gutters">
-    <div className="col-md-2">
-        <img src={element[2]} class="card-img rounded-0" alt="..." />
-    </div>
     <div className="col-md-10">
         <div className="card-body">
-            <small className="card-title">{element[0]}</small><br />
-            <small className="text-muted">{element[1]}</small><br />
-            <Link className="btn btn-primary btn-sm position-relative" to={"/interesse/single/" + element[0]} style={{top: "15px"}}>Show more</Link>
+            <small className="card-title">{element[5]}</small><br />
+            <small className="text-muted">{element[2]}</small><br />
+            <Link className="btn btn-primary btn-sm position-relative" to={"/single/" + element[10]} style={{top: "15px"}}>Show more</Link>
         </div>
     </div>
 </div>

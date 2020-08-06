@@ -30,7 +30,22 @@ render() {
 
 return (<div className="container">
 
-<Nav nameOne="company" nameTow={this.props.match.params.title}></Nav>
+<Nav nameOne={this.props.match.params.company} nameTow={this.props.match.params.title}></Nav>
+
+
+<div className="card mb-5 border-0 rounded-0 shadow-sm bg-light">
+	<div className="row no-gutters">
+		<div className="col-md-3">
+			<img src="/undraw_business_decisions_gjwy.svg" class="w-100 h-100 mt-2 rounded p-3" alt="..." />
+		</div>
+		<div className="col-md-9">
+			<div className="card-body">
+			<h5 className="card-title">Company : { this.props.match.params.company }</h5>
+            <p className="card-subtitle text-muted mb-4">Title : {this.props.match.params.title}</p>
+  		</div>
+		</div>
+	</div>
+</div>
 
 <Post name="all jobs" link="/single/" elements={this.state.titlesByCompany}></Post>
 
