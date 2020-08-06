@@ -275,14 +275,14 @@ const listAge = ages.map((element) =>
 
 
 return (
-<div className="container mt-2 mb-5 mt-5">
-    <div className="row justify-content-center position-relative">
-        <div className="col-md-12">
+  <div className="container-fluid">
+      <div className="row p-5">
+          <div className="col-md-6">
             <div className="card border-0 shadow">
 
               { this.state.errorMessage && <div class="alert alert-danger" role="alert">{ this.state.errorMessage }</div> }
 
-                <div className="card-header border-0 bg-dark text-light">Register</div>
+                <div className="card-header border-0 bg-info text-light">Register</div>
 
                 <div className="card-body">
                     <form method="POST" onSubmit={this.handleSubmit}>
@@ -341,7 +341,7 @@ return (
                         </div>
 
                         <div className="form-group  col-md-12">
-                            <button type="submit" className="btn btn-primary" onClick={handleSignin}>Register</button>
+                            <button type="submit" className="btn btn-outline-info" onClick={handleSignin}>Register</button>
                         </div>
 
                         </div>
@@ -349,6 +349,11 @@ return (
                 </div>
             </div>
         </div>
+
+        <div className="col-md-6">
+            <img src="/undraw_sign_in_e6hj.svg" className="w-100 mt-2 rounded" alt=""/>
+        </div>
+
     </div>
 </div>
         );
