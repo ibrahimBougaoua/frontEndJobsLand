@@ -94,21 +94,7 @@ function App() {
   </div>
   <div className="col-md-3 p-4"> 
     <p className="text-sm-left text-white">Jobs</p>
-    <p className="btn btn-outline-info btn-sm mr-2"><Link className="text-white" to={"/Job"} >Job</Link></p>
-    <p className="btn btn-outline-info btn-sm mr-2"><Link className="text-white" to={"/Job"} >Job</Link></p>
-    <p className="btn btn-outline-info btn-sm mr-2"><Link className="text-white" to={"/Job"} >Job</Link></p>
-    <p className="btn btn-outline-info btn-sm mr-2"><Link className="text-white" to={"/Job"} >Job</Link></p>
-    <p className="btn btn-outline-info btn-sm mr-2"><Link className="text-white" to={"/Job"} >Job</Link></p>
-    <p className="btn btn-outline-info btn-sm mr-2"><Link className="text-white" to={"/Job"} >Job</Link></p>
-    <p className="btn btn-outline-info btn-sm mr-2"><Link className="text-white" to={"/Job"} >Job</Link></p>
-    <p className="btn btn-outline-info btn-sm mr-2"><Link className="text-white" to={"/Job"} >Job</Link></p>
-    <p className="btn btn-outline-info btn-sm mr-2"><Link className="text-white" to={"/Job"} >Job</Link></p>
-    <p className="btn btn-outline-info btn-sm mr-2"><Link className="text-white" to={"/Job"} >Job</Link></p>
-    <p className="btn btn-outline-info btn-sm mr-2"><Link className="text-white" to={"/Job"} >Job</Link></p>
-    <p className="btn btn-outline-info btn-sm mr-2"><Link className="text-white" to={"/Job"} >Job</Link></p>
-    <p className="btn btn-outline-info btn-sm mr-2"><Link className="text-white" to={"/Job"} >Job</Link></p>
-    <p className="btn btn-outline-info btn-sm mr-2"><Link className="text-white" to={"/Job"} >Job</Link></p>
-    <p className="btn btn-outline-info btn-sm mr-2"><Link className="text-white" to={"/Job"} >Job</Link></p>
+    <img src="undraw_job_offers_kw5d.svg" className="w-100 h-100 rounded" alt=""/>
   </div>
   <div className="col-md-6 p-4"> 
       <div className="jumbotron jumbotron-fluid p-0">

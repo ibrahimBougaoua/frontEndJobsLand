@@ -46,7 +46,7 @@ const historyViews = this.state.jobsViews.map((element) =>
 return (
 <div className="container">
 
-<Nav nameOne="history" ></Nav>
+<Nav nameOne="Historique" ></Nav>
 
 
 <div className="row">
