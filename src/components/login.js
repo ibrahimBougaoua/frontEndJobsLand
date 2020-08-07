@@ -100,7 +100,7 @@ return (
         </div>
 
         <div className="col-md-7">
-            <img src="/undraw_Profile_data_re_v81r.svg" className="w-100 mt-2 rounded" alt=""/>
+            <img src="/undraw_secure_login_pdn4.svg" className="w-100 mt-2 rounded" alt=""/>
         </div>
 
     </div>
