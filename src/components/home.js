@@ -129,7 +129,7 @@ return (
         <select name="cate" class="form-control" value={this.state.cate} onChange={this.handleChangeCate}>
   <option value="skills">Skills</option>
   <option value="majors">Majors</option>
-  <option value="company">Company</option>
+  <option value="city">City</option>
 </select>
           </div>
 
