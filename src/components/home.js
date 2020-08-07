@@ -145,6 +145,43 @@ return (
                     <div className="col-md-7">
                     <img src="undraw_interview_rmcf.svg" className="w-100 h-100 rounded" alt=""/>
                     </div>
+
+
+
+{
+  this.state.visible
+    ? <div className="modal fade bd-example-modal-xl" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div className="modal-dialog modal-xl" role="document">
+    <div className="modal-content">
+      <div className="modal-header">
+        <h5 className="modal-title" id="exampleModalLabel">Searching...</h5>
+        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div className="modal-body">
+      <div className="card border-0 rounded-0 shadow-sm bg-light">
+  <div className="row no-gutters">
+  <div className="col-md-12">
+    
+  <Resultat link="/movie/single/" elements={this.state.searchDataMovies}></Resultat>
+
+  </div>
+  </div>
+      </div>
+      </div>
+      <div className="modal-footer">
+        <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+    : null
+}
+
+
+
+
                     </div>
                 </div>
         </div>
