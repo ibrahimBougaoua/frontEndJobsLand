@@ -172,12 +172,7 @@ const listSugg = sugg.map((element) =>
 );
 
 
-const searchRecentesJobSkills = this.state.recentesJobSkills.map((e,v) =>
-  <b>{e + ' : ' + v}</b>
-);
-
-
-
+const searchRecentesJobSkills = Object.keys(this.state.RecherchesRecentesJobSkills).map(function(key) {return key;})
 
 return (
 <div className="container-fluid m-0 p-0">
