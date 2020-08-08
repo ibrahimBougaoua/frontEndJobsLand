@@ -115,34 +115,46 @@ event.preventDefault();
 
   componentDidMount = () => {
     recommendedMajors().then(response => {
+    if(response.data != ""){
 	  this.setState({
       majors: response.data
-  	});
+    });
+    }
 	  });
     recommendedSkills().then(response => {
+    if(response.data != ""){
 	  this.setState({
       skills: response.data
-  	});
+    });
+  }
 	  });
     recommendedCity().then(response => {
+    if(response.data != ""){
 	  this.setState({
       city: response.data
-  	});
+    });
+  }
 	  });
     RecherchesRecentesJobSkills().then(response => {
+    if(response.data != ""){
 	  this.setState({
       recentesJobSkills: response.data
-  	});
+    });
+  }
 	  });
     RecherchesRecentesJobMajors().then(response => {
+    if(response.data != ""){
 	  this.setState({
       recentesJobMajors: response.data
-  	});
+    });
+  }
 	  });
     RecherchesRecentesJobCity().then(response => {
+    if(response.data != ""){
 	  this.setState({
       recentesJobCity: response.data
-  	});
+    });
+  }
 	  });
   }
 
@@ -189,14 +201,14 @@ return (
                 <form className="mt-4" method="POST" onSubmit={this.handleSubmit}>
           
           <div className="form-group col-md-12">
-              <input className="form-control form-control-lg" name="search" type="text" onChange={this.handleChangeValue} value={this.state.value} placeholder="Rechercher by skills,Majors,company" aria-label="Search" />          
+              <input className="form-control form-control-lg" name="search" type="text" onChange={this.handleChangeValue} value={this.state.value} placeholder="Rechercher par compétences,majeures,ville" aria-label="Search" />          
           </div>    
           
           <div className="form-group col-md-12">
         <select name="cate" class="form-control" value={this.state.cate} onChange={this.handleChangeCate}>
-  <option value="skills">Skills</option>
-  <option value="majors">Majors</option>
-  <option value="city">City</option>
+  <option value="skills">Compétences</option>
+  <option value="majors">Majeures</option>
+  <option value="city">Ville</option>
 </select>
           </div>
 
@@ -262,9 +274,6 @@ return (
     </div>
 </div>
 
-
-
-
       <div className="container mt-5">
         <div className="row justify-content-center">
             <div className="col-md-6">
@@ -282,14 +291,17 @@ return (
             <div className="col-md-6">
               <img src="undraw_reading_list_4boi.svg" className="w-100 h-50 mt-2 rounded" alt=""/>
             </div>
-        </div>
-      </div>
+            </div>
 
-        <div className="container">
-          { this.state.majors != '' ? <Post name="Recommended by Majors" link="single/" elements={this.state.majors}></Post> : null }
+
+            <div className="row justify-content-center">
+            { this.state.majors != '' ? <Post name="Recommended by Majors" link="single/" elements={this.state.majors}></Post> : null }
           { this.state.skills != '' ? <Post name="Recommended by Skills" link="single/" elements={this.state.skills}></Post> : null }
           { this.state.city != '' ? <Post name="Recommended by City" link="single/" elements={this.state.city}></Post> : null }
+
+
         </div>
+      </div>
 
         <div className="col-md-12 bg-info">    
             <div className="jumbotron jumbotron-fluid">
