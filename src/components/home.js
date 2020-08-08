@@ -171,12 +171,9 @@ const listSugg = sugg.map((element) =>
 <Link className="btn btn-outline-light btn-lg m-1" to={this.props.path + element}>{element}</Link>
 );
 
-
-const searchRecentesJobSkills = Object.keys(this.state.RecherchesRecentesJobSkills).map(function(key) {return key;})
-
 return (
 <div className="container-fluid m-0 p-0">
-{searchRecentesJobSkills}
+
     <div className="row justify-content-center mt-5 mb-5">
 
         <div className="col-md-12">    
@@ -276,18 +273,11 @@ return (
               <button type="submit" className="btn btn-outline-info float-right">Effacer</button>
 
 <ul class="list-group float-left mt-3 w-100">
-  <li class="list-group-item d-flex justify-content-between align-items-center">
-    job exmple one
-    <span class="badge badge-info badge-pill">14</span>
-  </li>
-  <li class="list-group-item d-flex justify-content-between align-items-center">
-    job exmple tow
-    <span class="badge badge-info badge-pill">2</span>
-  </li>
-  <li class="list-group-item d-flex justify-content-between align-items-center">
-    job exmple three
-    <span class="badge badge-info badge-pill">1</span>
-  </li>
+
+{Object.keys(this.state.recentesJobSkills).map(function(key,value) {
+  return <li class="list-group-item d-flex justify-content-between align-items-center">{key}<span class="badge badge-info badge-pill">{value}</span></li>;
+})}
+
 </ul>
 
             </div>
