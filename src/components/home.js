@@ -324,11 +324,18 @@ return (
         <div className="col-md-12">    
             <div className="jumbotron jumbotron-fluid">
                 <div className="container">
-                    <h1 className="display-4 text-center font-weight-bold">Trouvez des postes ou des stages à pourvoir</h1>
-                    <img src="/undraw_personal_text_vkd8.svg" class="w-75 h-75 mt-2 rounded p-3" alt="..." />
-                    {listSugg}
+                <div className="row">
+                <div className="col-md-6">
+                    <img src="/undraw_personal_text_vkd8.svg" class="w-100 h-100 rounded p-3" alt="..." />
+                </div>
+                <div className="col-md-6">
+                    <h1 className="display-5 text-center font-weight-bold mt-5">Connectez-vous avec des personnes qui peuvent vous aider.</h1>
+                    <h5 className="display-5 text-muted mt-5">De nombreuses entreprises recherchent des personnes compétentes comme vous, qu'attendez-vous maintenant ?</h5>
+                    <h5 className="display-5 text-muted mt-5">Il y a plus de 2000 clients qui s'inscrivent sur notre site chaque jour.</h5>
+                </div>
                 </div>
             </div>
+        </div>
         </div>
 
 </div>
