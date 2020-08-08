@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import Post from "./post";
+import Resultat from "./resultat";
 
 // handle button click of login form
 async function recommendedMajors() {
@@ -51,7 +52,7 @@ export default class Home extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {all: [],value: '',cate: 'skills',majors: [],skills: [],city: []};
+    this.state = {visible: false,all: [],value: '',cate: 'skills',majors: [],skills: [],city: [],searchDataJobs: []};
     this.handleChangeValue = this.handleChangeValue.bind(this);
     this.handleChangeCate = this.handleChangeCate.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -68,6 +69,14 @@ export default class Home extends Component {
 handleSubmit(event) {
 console.log('value : ' + this.state.value)
 console.log('cate : ' + this.state.cate)
+resultat(this.state.value,this.state.cate).then(response => {
+  this.setState({
+    searchDataJobs: response.data
+  });
+  this.setState({
+    visible: true
+  });
+});
 event.preventDefault();
 }
 
@@ -173,7 +182,7 @@ return (
   <div className="row no-gutters">
   <div className="col-md-12">
     
-  <Post link="/single/" elements={this.state.searchDataMovies}></Post>
+  <Resultat link="/single/" elements={this.state.searchDataJobs}></Resultat>
 
   </div>
   </div>
