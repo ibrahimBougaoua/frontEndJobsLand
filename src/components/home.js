@@ -48,6 +48,17 @@ async function resultat(value,cate) {
   }
 }
 
+// handle button click of login form
+async function recherchesRecentes() {
+  try {
+    const response = await axios.get('http://127.0.0.1:5002/job/search/recentes/' + localStorage.getItem('email'))
+    console.log(response);
+    return response;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 export default class Home extends Component {
 
   constructor(props) {
