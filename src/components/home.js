@@ -172,9 +172,16 @@ const listSugg = sugg.map((element) =>
 );
 
 
+const searchRecentesJobSkills = this.state.recentesJobSkills.map((e,v) =>
+  <b>{e + ' : ' + v}</b>
+);
+
+
+
+
 return (
 <div className="container-fluid m-0 p-0">
-
+{searchRecentesJobSkills}
     <div className="row justify-content-center mt-5 mb-5">
 
         <div className="col-md-12">    
