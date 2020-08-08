@@ -36,6 +36,17 @@ async function recommendedCity() {
   }
 }
 
+// handle button click of login form
+async function resultat(value,cate) {
+  try {
+    const response = await axios.get('http://127.0.0.1:5002/job/search/?search=' + value + '&cate=' + cate + '&email=' + localStorage.getItem('email'))
+    console.log(response);
+    return response;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 export default class Home extends Component {
 
   constructor(props) {
@@ -146,8 +157,6 @@ return (
                     <img src="undraw_interview_rmcf.svg" className="w-100 h-100 rounded" alt=""/>
                     </div>
 
-
-
 {
   this.state.visible
     ? <div className="modal fade bd-example-modal-xl" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -164,7 +173,7 @@ return (
   <div className="row no-gutters">
   <div className="col-md-12">
     
-  <Resultat link="/movie/single/" elements={this.state.searchDataMovies}></Resultat>
+  <Post link="/single/" elements={this.state.searchDataMovies}></Post>
 
   </div>
   </div>
