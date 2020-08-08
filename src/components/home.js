@@ -273,19 +273,9 @@ return (
               <button type="submit" className="btn btn-outline-info float-right">Effacer</button>
 
 <ul class="list-group float-left mt-3 w-100">
-
-{Object.entries(this.state.recentesJobSkills).map((key) => {
-  return <li class="list-group-item d-flex justify-content-between align-items-center">{key[0]}<span class="badge badge-info badge-pill">{key[1]}</span></li>;
-})}
-
-{Object.entries(this.state.recentesJobMajors).map((key) => {
-  return <li class="list-group-item d-flex justify-content-between align-items-center">{key[0]}<span class="badge badge-info badge-pill">{key[1]}</span></li>;
-})}
-
-{Object.entries(this.state.recentesJobCity).map((key) => {
-  return <li class="list-group-item d-flex justify-content-between align-items-center">{key[0]}<span class="badge badge-info badge-pill">{key[1]}</span></li>;
-})}
-
+{ this.state.recentesJobSkills != '' ? Object.entries(this.state.recentesJobSkills).map((key) => { return <li class="list-group-item d-flex justify-content-between align-items-center">{key[0]}<span class="badge badge-info badge-pill">{key[1]}</span></li>; }) : null }
+{ this.state.recentesJobMajors != '' ? Object.entries(this.state.recentesJobMajors).map((key) => { return <li class="list-group-item d-flex justify-content-between align-items-center">{key[0]}<span class="badge badge-info badge-pill">{key[1]}</span></li>; }) : null }
+{ this.state.recentesJobCity != '' ? Object.entries(this.state.recentesJobCity).map((key) => { return <li class="list-group-item d-flex justify-content-between align-items-center">{key[0]}<span class="badge badge-info badge-pill">{key[1]}</span></li>; }) : null }
 </ul>
 
             </div>
@@ -295,20 +285,10 @@ return (
         </div>
       </div>
 
-
-
-
-
-
-
-
-
-
-
-        <div className="container">    
-        <Post name="Recommended by Majors" link="single/" elements={this.state.majors}></Post>
-        <Post name="Recommended by Skills" link="single/" elements={this.state.skills}></Post>
-        <Post name="Recommended by City" link="single/" elements={this.state.city}></Post>
+        <div className="container">
+          { this.state.majors != '' ? <Post name="Recommended by Majors" link="single/" elements={this.state.majors}></Post> : null }
+          { this.state.skills != '' ? <Post name="Recommended by Skills" link="single/" elements={this.state.skills}></Post> : null }
+          { this.state.city != '' ? <Post name="Recommended by City" link="single/" elements={this.state.city}></Post> : null }
         </div>
 
         <div className="col-md-12 bg-info">    
