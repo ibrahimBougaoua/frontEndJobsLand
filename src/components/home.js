@@ -252,8 +252,8 @@ return (
         </div>
         </div>
 
-<div className="row mt-5 mb-3">
-    <div className="col-md-12 bg-info">
+<div className="row">
+    <div className="col-md-12 bg-info mt-5 mb-5">
             <div className="jumbotron jumbotron-fluid">
                 <div className="container">
                 <h1 className="display-5 text-center text-white font-weight-bold">Publiez votre offre d’emploi et trouvez les personnes dont vous avez besoin.</h1>
@@ -265,8 +265,8 @@ return (
 
 
 
-      <div className="container">
-        <div className="row justify-content-center mt-5">
+      <div className="container mt-5">
+        <div className="row justify-content-center">
             <div className="col-md-6">
 
               <h3 className="load float-left font-weight-bold text-info">Recherches récentes</h3>
@@ -274,8 +274,16 @@ return (
 
 <ul class="list-group float-left mt-3 w-100">
 
-{Object.keys(this.state.recentesJobSkills).map(function(key,value) {
-  return <li class="list-group-item d-flex justify-content-between align-items-center">{key}<span class="badge badge-info badge-pill">{value}</span></li>;
+{Object.entries(this.state.recentesJobSkills).map((key) => {
+  return <li class="list-group-item d-flex justify-content-between align-items-center">{key[0]}<span class="badge badge-info badge-pill">{key[1]}</span></li>;
+})}
+
+{Object.entries(this.state.recentesJobMajors).map((key) => {
+  return <li class="list-group-item d-flex justify-content-between align-items-center">{key[0]}<span class="badge badge-info badge-pill">{key[1]}</span></li>;
+})}
+
+{Object.entries(this.state.recentesJobCity).map((key) => {
+  return <li class="list-group-item d-flex justify-content-between align-items-center">{key[0]}<span class="badge badge-info badge-pill">{key[1]}</span></li>;
 })}
 
 </ul>
@@ -313,6 +321,15 @@ return (
             </div>
         </div>
 
+        <div className="col-md-12">    
+            <div className="jumbotron jumbotron-fluid">
+                <div className="container">
+                    <h1 className="display-4 text-center font-weight-bold">Trouvez des postes ou des stages à pourvoir</h1>
+                    <img src="/undraw_personal_text_vkd8.svg" class="w-75 h-75 mt-2 rounded p-3" alt="..." />
+                    {listSugg}
+                </div>
+            </div>
+        </div>
 
 </div>
 );
