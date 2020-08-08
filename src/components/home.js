@@ -49,9 +49,9 @@ async function resultat(value,cate) {
 }
 
 // handle button click of login form
-async function recherchesRecentes() {
+async function RecherchesRecentesJobSkills() {
   try {
-    const response = await axios.get('http://127.0.0.1:5002/job/search/recentes/' + localStorage.getItem('email'))
+    const response = await axios.get('http://127.0.0.1:5002/job/search/recentes/skills/' + localStorage.getItem('email'))
     console.log(response);
     return response;
   } catch (error) {
@@ -63,7 +63,7 @@ export default class Home extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {visible: false,all: [],value: '',cate: 'skills',majors: [],skills: [],city: [],searchDataJobs: []};
+    this.state = {visible: false,all: [],value: '',cate: 'skills',majors: [],skills: [],city: [],searchDataJobs: [],recentes: []};
     this.handleChangeValue = this.handleChangeValue.bind(this);
     this.handleChangeCate = this.handleChangeCate.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -105,6 +105,21 @@ event.preventDefault();
     recommendedCity().then(response => {
 	  this.setState({
       city: response.data
+  	});
+	  });
+    RecherchesRecentesJobSkills().then(response => {
+	  this.setState({
+      recentesJobSkills: response.data
+  	});
+	  });
+    RecherchesRecentesJobSkills().then(response => {
+	  this.setState({
+      recentesJobSkills: response.data
+  	});
+	  });
+    RecherchesRecentesJobSkills().then(response => {
+	  this.setState({
+      recentesJobSkills: response.data
   	});
 	  });
   }
