@@ -36,7 +36,7 @@ const Logout = () => {
   <ul className="navbar-nav ml-auto">
               { localStorage.getItem('token') != '' ?
               <li className="nav-item">
-                <Link className="btn btn-sm btn-outline-info mr-2" to={"/interesse"}>Intéressé</Link>
+                <Link className="btn btn-sm btn-outline-info mr-2" to={"/interesse"}><i class="far fa-tv"></i> Intéressé</Link>
               </li>
               : null }
               { localStorage.getItem('token') != '' ?
@@ -51,7 +51,7 @@ const Logout = () => {
               : null }
               { localStorage.getItem('token') != '' ?
               <li className="nav-item">
-                <Link className="btn btn-sm btn-outline-info mr-2" to={"/profile"}><i class="far fa-profile"></i> Profile</Link>
+                <Link className="btn btn-sm btn-outline-info mr-2" to={"/profile"}><i class="far fa-user"></i> Profile</Link>
               </li>
               : null }
               { localStorage.getItem('token') == '' ?
