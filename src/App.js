@@ -46,7 +46,7 @@ const Logout = () => {
               : null }
               { localStorage.getItem('token') != '' ?
               <li className="nav-item">
-                <Link className="btn btn-sm btn-outline-info mr-2" to={"/history"}>Historique</Link>
+                <Link className="btn btn-sm btn-outline-info mr-2" to={"/history"}><i class="fas fa-history"></i> Historique</Link>
               </li>
               : null }
               { localStorage.getItem('token') != '' ?
