@@ -34,37 +34,36 @@ const Logout = () => {
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
   <ul className="navbar-nav ml-auto">
-              { localStorage.getItem('token') != '' ?
+              { localStorage.getItem('token') ?
               <li className="nav-item">
-                <Link className="btn btn-sm btn-outline-info mr-2" to={"/interesse"}><i class="far fa-tv"></i> Intéressé</Link>
+                <Link className="btn btn-sm btn-outline-info mr-2" to={"/interesse"}><i class="fas fa-tv"></i> Intéressé</Link>
               </li>
               : null }
-              { localStorage.getItem('token') != '' ?
+              { localStorage.getItem('token') ?
               <li className="nav-item">
                 <Link className="btn btn-sm btn-outline-info mr-2" to={"/abonnements"}><i class="far fa-bell"></i> Abonnements</Link>
               </li>
               : null }
-              { localStorage.getItem('token') != '' ?
+              { localStorage.getItem('token') ?
               <li className="nav-item">
                 <Link className="btn btn-sm btn-outline-info mr-2" to={"/history"}><i class="fas fa-history"></i> Historique</Link>
               </li>
               : null }
-              { localStorage.getItem('token') != '' ?
+              { localStorage.getItem('token') ?
               <li className="nav-item">
                 <Link className="btn btn-sm btn-outline-info mr-2" to={"/profile"}><i class="far fa-user"></i> Profile</Link>
               </li>
               : null }
-              { localStorage.getItem('token') == '' ?
+              { localStorage.getItem('token') ? null : 
               <li className="nav-item">
                 <Link className="btn btn-sm btn-outline-info mr-2" to={"/signup"}>S’inscrire</Link>
-              </li>
-              : null }
-              { localStorage.getItem('token') == '' ?
+              </li> }
+              { localStorage.getItem('token') ?
+              null : 
               <li className="nav-item">
                 <Link className="btn btn-sm btn-outline-info mr-2" to={"/login"}>S’identifier</Link>
-              </li>
-              : null }
-              { localStorage.getItem('token') != '' ?
+              </li> }
+              { localStorage.getItem('token') ?
               <li className="nav-item">
                 <button type="submit" className="btn btn-sm btn-outline-info" onClick={Logout}><i class="fas fa-sign-out-alt"></i> Déconnexion</button>
               </li>
