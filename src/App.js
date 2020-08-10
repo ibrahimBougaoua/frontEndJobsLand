@@ -17,7 +17,7 @@ import Jobs from "./components/jobs";
 function App() {
  // handle button click of login form
 const Logout = () => {
-  localStorage.removeItem("tokeb");
+  localStorage.removeItem("token");
   localStorage.removeItem("email");
   window.location.replace("/")
 }
@@ -51,7 +51,7 @@ const Logout = () => {
               : null }
               { localStorage.getItem('token') != '' ?
               <li className="nav-item">
-                <Link className="btn btn-sm btn-outline-info mr-2" to={"/profile"}>Profile</Link>
+                <Link className="btn btn-sm btn-outline-info mr-2" to={"/profile"}><i class="far fa-profile"></i> Profile</Link>
               </li>
               : null }
               { localStorage.getItem('token') == '' ?
