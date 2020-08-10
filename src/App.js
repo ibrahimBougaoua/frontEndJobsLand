@@ -41,7 +41,7 @@ const Logout = () => {
               : null }
               { localStorage.getItem('token') != '' ?
               <li className="nav-item">
-                <Link className="btn btn-sm btn-outline-info mr-2" to={"/abonnements"}>Abonnements</Link>
+                <Link className="btn btn-sm btn-outline-info mr-2" to={"/abonnements"}><i class="far fa-bell"></i> Abonnements</Link>
               </li>
               : null }
               { localStorage.getItem('token') != '' ?
