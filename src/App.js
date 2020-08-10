@@ -49,12 +49,12 @@ function App() {
                 <Link className="btn btn-sm btn-outline-info mr-2" to={"/profile"}>Profile</Link>
               </li>
               : null }
-              { localStorage.getItem('token') != '' ?
+              { localStorage.getItem('token') == '' ?
               <li className="nav-item">
                 <Link className="btn btn-sm btn-outline-info mr-2" to={"/signup"}>S’inscrire</Link>
               </li>
               : null }
-              { localStorage.getItem('token') != '' ?
+              { localStorage.getItem('token') == '' ?
               <li className="nav-item">
                 <Link className="btn btn-sm btn-outline-info mr-2" to={"/login"}>S’identifier</Link>
               </li>
