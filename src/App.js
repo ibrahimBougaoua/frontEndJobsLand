@@ -29,27 +29,41 @@ function App() {
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
   <ul className="navbar-nav ml-auto">
+              { localStorage.getItem('token') != '' ?
               <li className="nav-item">
                 <Link className="btn btn-sm btn-outline-info mr-2" to={"/interesse"}>Intéressé</Link>
               </li>
+              : null }
+              { localStorage.getItem('token') != '' ?
               <li className="nav-item">
                 <Link className="btn btn-sm btn-outline-info mr-2" to={"/abonnements"}>Abonnements</Link>
               </li>
+              : null }
+              { localStorage.getItem('token') != '' ?
               <li className="nav-item">
                 <Link className="btn btn-sm btn-outline-info mr-2" to={"/history"}>Historique</Link>
               </li>
+              : null }
+              { localStorage.getItem('token') != '' ?
               <li className="nav-item">
                 <Link className="btn btn-sm btn-outline-info mr-2" to={"/profile"}>Profile</Link>
               </li>
+              : null }
+              { localStorage.getItem('token') != '' ?
               <li className="nav-item">
                 <Link className="btn btn-sm btn-outline-info mr-2" to={"/signup"}>S’inscrire</Link>
               </li>
+              : null }
+              { localStorage.getItem('token') != '' ?
               <li className="nav-item">
                 <Link className="btn btn-sm btn-outline-info mr-2" to={"/login"}>S’identifier</Link>
               </li>
+              : null }
+              { localStorage.getItem('token') != '' ?
               <li className="nav-item">
                 <Link className="btn btn-sm btn-outline-info" to={"/deconnexion"}>Déconnexion</Link>
               </li>
+              : null }
     </ul>
   </div>
 </nav>
