@@ -15,7 +15,12 @@ import Single from "./components/single";
 import Jobs from "./components/jobs";
 
 function App() {
- 
+ // handle button click of login form
+const Logout = () => {
+  localStorage.removeItem("tokeb");
+  localStorage.removeItem("email");
+  window.location.replace("/")
+}
   return (<div>
     <Router>
     
