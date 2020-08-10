@@ -66,7 +66,7 @@ const Logout = () => {
               : null }
               { localStorage.getItem('token') != '' ?
               <li className="nav-item">
-                <Link className="btn btn-sm btn-outline-info" to={"/deconnexion"}>Déconnexion</Link>
+                <button type="submit" className="btn btn-sm btn-outline-info" onClick={Logout}><i class="fas fa-sign-out-alt"></i> Déconnexion</button>
               </li>
               : null }
     </ul>
