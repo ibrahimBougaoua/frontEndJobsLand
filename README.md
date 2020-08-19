@@ -1,1 +1,1 @@
-[![Watch the video]()](https://www.youtube.com/watch?v=LdPUx37f2sA&feature=youtu.be&fbclid=IwAR3GLKlpIM-EdUP2zjf2JWdxn_CanXCIAmGCKIUlj1UPVfbGSnbn3FvrHsA)
+[![Watch the video](https://i9.ytimg.com/vi/2a-pmjdax5A/mq3.jpg?sqp=CMT69PkF&rs=AOn4CLCFsUmYy8q4K91UB5CW72YgF7JcAg)](https://www.youtube.com/watch?v=LdPUx37f2sA&feature=youtu.be&fbclid=IwAR3GLKlpIM-EdUP2zjf2JWdxn_CanXCIAmGCKIUlj1UPVfbGSnbn3FvrHsA)
